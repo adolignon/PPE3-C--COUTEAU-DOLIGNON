@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PPE3_C__COUTEAU_DOLIGNON.View;
 
 namespace PPE3_C__COUTEAU_DOLIGNON
 {
@@ -25,6 +26,12 @@ namespace PPE3_C__COUTEAU_DOLIGNON
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void parGenreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueSupportParGenre laVue = new vueSupportParGenre();
+            laVue.Show();
         }
     }
 }
