@@ -114,24 +114,28 @@
             this.parSUpportToolStripMenuItem.Name = "parSUpportToolStripMenuItem";
             this.parSUpportToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.parSUpportToolStripMenuItem.Text = "Par Support";
+            this.parSUpportToolStripMenuItem.Click += new System.EventHandler(this.parSUpportToolStripMenuItem_Click);
             // 
             // parClientToolStripMenuItem
             // 
             this.parClientToolStripMenuItem.Name = "parClientToolStripMenuItem";
             this.parClientToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.parClientToolStripMenuItem.Text = "Par Client";
+            this.parClientToolStripMenuItem.Click += new System.EventHandler(this.parClientToolStripMenuItem_Click);
             // 
             // parReferenceEmpruntToolStripMenuItem
             // 
             this.parReferenceEmpruntToolStripMenuItem.Name = "parReferenceEmpruntToolStripMenuItem";
             this.parReferenceEmpruntToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.parReferenceEmpruntToolStripMenuItem.Text = "Par Reference Emprunt";
+            this.parReferenceEmpruntToolStripMenuItem.Click += new System.EventHandler(this.parReferenceEmpruntToolStripMenuItem_Click);
             // 
             // parDateAbonnementToolStripMenuItem
             // 
             this.parDateAbonnementToolStripMenuItem.Name = "parDateAbonnementToolStripMenuItem";
             this.parDateAbonnementToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.parDateAbonnementToolStripMenuItem.Text = "Par Date Abonnement";
+            this.parDateAbonnementToolStripMenuItem.Click += new System.EventHandler(this.parDateAbonnementToolStripMenuItem_Click);
             // 
             // comptesToolStripMenuItem
             // 

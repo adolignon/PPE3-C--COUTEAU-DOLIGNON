@@ -44,6 +44,30 @@ namespace PPE3_C__COUTEAU_DOLIGNON
         {
             vueVerificationCompte verifCompte = new vueVerificationCompte();
             verifCompte.Show();
+		}
+		
+        private void parSUpportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueParSupport laVue = new vueParSupport();
+            laVue.Show();
+        }
+
+        private void parClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueParClient laVue = new vueParClient();
+            laVue.Show();
+        }
+
+        private void parReferenceEmpruntToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueParReferenceClient laVue = new vueParReferenceClient();
+            laVue.Show();
+        }
+
+        private void parDateAbonnementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueParDateAbonnement laVue = new vueParDateAbonnement();
+            laVue.Show();
         }
     }
 }
