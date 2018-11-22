@@ -27,5 +27,10 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
         {
             bsSupport.DataSource = ((genre)bsGenre.Current).support.ToList();
         }
+
+        private void vueSupportParGenre_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

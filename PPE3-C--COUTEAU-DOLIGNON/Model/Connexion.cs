@@ -35,6 +35,13 @@ namespace PPE3_C__COUTEAU_DOLIGNON.Model
             return maConnexion.film.ToList();
         }
 
+        public static void setActif(client leClient)
+        {
+            maConnexion.client.Find(leClient.idClient).actif = 1;
+            maConnexion.SaveChanges();
+            
+        }
+
         public static List<genre> ListeDesGenre()
         {
             return maConnexion.genre.ToList();
