@@ -102,6 +102,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\vueParClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueParClient.Designer.cs">
+      <DependentUpon>vueParClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\vueParDateAbonnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueParDateAbonnement.Designer.cs">
+      <DependentUpon>vueParDateAbonnement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\vueParReferenceClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueParReferenceClient.Designer.cs">
+      <DependentUpon>vueParReferenceClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\vueParSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueParSupport.Designer.cs">
+      <DependentUpon>vueParSupport.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\vueSupportParGenre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +145,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\vueParClient.resx">
+      <DependentUpon>vueParClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueParDateAbonnement.resx">
+      <DependentUpon>vueParDateAbonnement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueParReferenceClient.resx">
+      <DependentUpon>vueParReferenceClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueParSupport.resx">
+      <DependentUpon>vueParSupport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\vueSupportParGenre.resx">
       <DependentUpon>vueSupportParGenre.cs</DependentUpon>
     </EmbeddedResource>
