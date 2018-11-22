@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace PPE3_C__COUTEAU_DOLIGNON
 {
-    public partial class Form1 : Form
+    public partial class Controlleur : Form
     {
-        public Form1()
+        public Controlleur()
         {
             InitializeComponent();
+        }
+
+        private void ajoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

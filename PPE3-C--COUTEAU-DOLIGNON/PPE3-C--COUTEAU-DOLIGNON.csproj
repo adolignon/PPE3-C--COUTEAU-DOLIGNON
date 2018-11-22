@@ -32,8 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,14 +54,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Controller\Controlleur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Controller\Controlleur.Designer.cs">
+      <DependentUpon>Controlleur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\client.cs">
+      <DependentUpon>ModelDonnées.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\emprunt.cs">
+      <DependentUpon>ModelDonnées.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\episode.cs">
+      <DependentUpon>ModelDonnées.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\film.cs">
+      <DependentUpon>ModelDonnées.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\genre.cs">
+      <DependentUpon>ModelDonnées.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelDonnées.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDonnées.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelDonnées.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDonnées.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelDonnées.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDonnées.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\saison.cs">
+      <DependentUpon>ModelDonnées.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\serie.cs">
+      <DependentUpon>ModelDonnées.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\support.cs">
+      <DependentUpon>ModelDonnées.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controller\Controlleur.resx">
+      <DependentUpon>Controlleur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +113,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Model\ModelDonnées.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDonnées.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\ModelDonnées.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelDonnées.Context.cs</LastGenOutput>
+      <DependentUpon>ModelDonnées.edmx</DependentUpon>
+    </None>
+    <None Include="Model\ModelDonnées.edmx.diagram">
+      <DependentUpon>ModelDonnées.edmx</DependentUpon>
+    </None>
+    <None Include="Model\ModelDonnées.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDonnées.edmx</DependentUpon>
+      <LastGenOutput>ModelDonnées.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +143,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
