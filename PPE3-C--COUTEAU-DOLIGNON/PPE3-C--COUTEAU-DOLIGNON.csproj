@@ -108,7 +108,7 @@
     </Compile>
     <Compile Include="View\vueFermetureCompte.Designer.cs">
       <DependentUpon>vueFermetureCompte.cs</DependentUpon>
-
+	</Compile>
     <Compile Include="View\vueParClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +166,7 @@
     </Compile>
     <EmbeddedResource Include="View\vueFermetureCompte.resx">
       <DependentUpon>vueFermetureCompte.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="View\vueParClient.resx">
       <DependentUpon>vueParClient.cs</DependentUpon>
     </EmbeddedResource>

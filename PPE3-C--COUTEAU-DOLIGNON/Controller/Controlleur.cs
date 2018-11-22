@@ -69,5 +69,11 @@ namespace PPE3_C__COUTEAU_DOLIGNON
             vueParDateAbonnement laVue = new vueParDateAbonnement();
             laVue.Show();
         }
+
+        private void fermetureDunCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueFermetureCompte fermetureCompte = new vueFermetureCompte();
+            fermetureCompte.Show();
+        }
     }
 }

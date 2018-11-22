@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PPE3_C__COUTEAU_DOLIGNON.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
         public vueFermetureCompte()
         {
             InitializeComponent();
+            bsFermCompte.DataSource = Connexion.ListeDesClients();
+            cbFermClient.DataSource = bsFermCompte;
+            cbFermClient.DisplayMember = "login";
+        }
+
+        private void vueFermetureCompte_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
