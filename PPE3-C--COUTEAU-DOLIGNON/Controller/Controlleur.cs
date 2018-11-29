@@ -20,7 +20,8 @@ namespace PPE3_C__COUTEAU_DOLIGNON
 
         private void ajoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            vueAddFilm laVue = new vueAddFilm();
+            laVue.Show();
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,18 +35,6 @@ namespace PPE3_C__COUTEAU_DOLIGNON
             laVue.Show();
         }
 
-        private void validationDunCompteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            vueValidationCompte validCompte = new vueValidationCompte();
-            validCompte.Show();
-        }
-
-        private void vérificationDunCompteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            vueVerificationCompte verifCompte = new vueVerificationCompte();
-            verifCompte.Show();
-		}
-		
         private void parSUpportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             vueParSupport laVue = new vueParSupport();
@@ -70,10 +59,58 @@ namespace PPE3_C__COUTEAU_DOLIGNON
             laVue.Show();
         }
 
-        private void fermetureDunCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void validationDunCompteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            vueFermetureCompte fermetureCompte = new vueFermetureCompte();
-            fermetureCompte.Show();
+            vueValidationCompte validCompte = new vueValidationCompte();
+            validCompte.Show();
+        }
+
+        private void vérificationDunCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueVerificationCompte verifCompte = new vueVerificationCompte();
+            verifCompte.Show();
+        }
+
+        private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnRetour laVue = new btnRetour();
+            laVue.Show();
+        }
+
+        private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueModifGenre laVue = new vueModifGenre();
+            laVue.Show();
+        }
+
+        private void ajoutToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            vueAjouterSerie laVue = new vueAjouterSerie();
+            laVue.Show();
+        }
+
+        private void modificationToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            vueModifFilm laVue = new vueModifFilm();
+            laVue.Show();
+        }
+
+        private void modificationToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            vueModifSerie laVue = new vueModifSerie();
+            laVue.Show();
+        }
+
+        private void ajoutToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            vueAddSaison laVue = new vueAddSaison();
+            laVue.Show();
+        }
+
+        private void modificationToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            vueModifSaison laVue = new vueModifSaison();
+            laVue.Show();
         }
 
         private void ajoutDunCompteToolStripMenuItem_Click(object sender, EventArgs e)

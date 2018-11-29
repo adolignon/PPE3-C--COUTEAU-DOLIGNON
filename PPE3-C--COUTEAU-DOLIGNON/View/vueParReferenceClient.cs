@@ -26,5 +26,10 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
         {
             bsSupport.DataSource = ((emprunt)bsRef.Current).support;
         }
+
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

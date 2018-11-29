@@ -9,28 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace PPE3_C__COUTEAU_DOLIGNON.View
 {
-    public partial class vueSupportParGenre : Form
+    public partial class vueModifGenre : Form
     {
-        public vueSupportParGenre()
+        public vueModifGenre()
         {
             InitializeComponent();
             bsGenre.DataSource = Connexion.ListeDesGenre();
             cbGenre.DataSource = bsGenre;
             cbGenre.DisplayMember = "libelleGenre";
-            bsSupport.DataSource = ((genre)bsGenre.Current).support.ToList();
+
         }
 
-        private void bsGenre_CurrentChanged(object sender, EventArgs e)
+        private void btnModif_Click(object sender, EventArgs e)
         {
-            bsSupport.DataSource = ((genre)bsGenre.Current).support.ToList();
-        }
-
-        private void vueSupportParGenre_Load(object sender, EventArgs e)
-        {
-
+            Connexion.modifierGenre((genre)bsGenre.Current,tbLibelleGenre.Text);
+            MessageBox.Show("Modifié !");
+            this.Close();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
