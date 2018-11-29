@@ -19,8 +19,8 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
             InitializeComponent();
 
             bsSerie.DataSource = Connexion.ListeDesSupports().Where(s => Connexion.ListeDesSeries().Select(se => se.idSerie).Contains(s.idSupport));
-            cbFilm.DataSource = bsSerie;
-            cbFilm.DisplayMember = "titreSupport";
+            cbSerie.DataSource = bsSerie;
+            cbSerie.DisplayMember = "titreSupport";
 
             bsGenre.DataSource = Connexion.ListeDesGenre();
             cbGenre.DataSource = bsGenre;
@@ -73,5 +73,9 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
             tbRealisateur.Text = ((support)bsSerie.Current).realisateur;
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

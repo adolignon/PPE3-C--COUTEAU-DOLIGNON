@@ -34,6 +34,17 @@ namespace PPE3_C__COUTEAU_DOLIGNON.Model
             maConnexion.SaveChanges();
         }
 
+        internal static void ajouterSaison(serie current, decimal annee, decimal nbEp)
+        {
+            saison laSaison = new saison();
+            laSaison.idSerie = current.idSerie;
+            laSaison.nbrEpisodesPrevus = Convert.ToInt32(nbEp);
+            laSaison.anneeSaison = Convert.ToInt32(annee);
+            laSaison.numSaison = maConnexion.serie.Find(current.idSerie).saison.Count+1;
+            maConnexion.serie.Find(current.idSerie).saison.Add(laSaison);
+            maConnexion.SaveChanges();
+        }
+
         internal static void modifierGenre(genre current, string libelle)
         {
             maConnexion.genre.Find(current.idGenre).libelleGenre = libelle;
@@ -48,6 +59,13 @@ namespace PPE3_C__COUTEAU_DOLIGNON.Model
         public static List<film> ListeDesFilms()
         {
             return maConnexion.film.ToList();
+        }
+
+        internal static void modifierSaison(serie laSerie, saison laSaison, decimal annee, decimal nbEp)
+        {
+            maConnexion.saison.Find(laSerie.idSerie,laSaison.numSaison).nbrEpisodesPrevus = Convert.ToInt32(nbEp);
+            maConnexion.saison.Find(laSerie.idSerie, laSaison.numSaison).anneeSaison = Convert.ToInt32(annee);
+            maConnexion.SaveChanges();
         }
 
         public static void setActif(client leClient)

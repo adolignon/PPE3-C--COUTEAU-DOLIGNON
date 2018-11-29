@@ -73,7 +73,7 @@ namespace PPE3_C__COUTEAU_DOLIGNON
 
         private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            vueAddGenre laVue = new vueAddGenre();
+            btnRetour laVue = new btnRetour();
             laVue.Show();
         }
 
@@ -98,6 +98,18 @@ namespace PPE3_C__COUTEAU_DOLIGNON
         private void modificationToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             vueModifSerie laVue = new vueModifSerie();
+            laVue.Show();
+        }
+
+        private void ajoutToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            vueAddSaison laVue = new vueAddSaison();
+            laVue.Show();
+        }
+
+        private void modificationToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            vueModifSaison laVue = new vueModifSaison();
             laVue.Show();
         }
     }

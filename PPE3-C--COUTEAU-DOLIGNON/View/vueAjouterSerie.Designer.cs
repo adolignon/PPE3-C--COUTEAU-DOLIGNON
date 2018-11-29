@@ -42,6 +42,7 @@
             this.tbRealisateur = new System.Windows.Forms.TextBox();
             this.btnImage = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,6 +120,7 @@
             // 
             // cbGenre
             // 
+            this.cbGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenre.FormattingEnabled = true;
             this.cbGenre.Location = new System.Drawing.Point(158, 86);
             this.cbGenre.Name = "cbGenre";
@@ -170,6 +172,16 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(600, 189);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(92, 38);
+            this.btnRetour.TabIndex = 12;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // vueAjouterSerie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +189,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnImage);
             this.Controls.Add(this.tbRealisateur);
@@ -212,5 +225,6 @@
         private System.Windows.Forms.TextBox tbRealisateur;
         private System.Windows.Forms.Button btnImage;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

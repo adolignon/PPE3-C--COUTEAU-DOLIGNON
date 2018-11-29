@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.cbClient = new System.Windows.Forms.ComboBox();
             this.dgSupport = new System.Windows.Forms.DataGridView();
-            this.bsSupport = new System.Windows.Forms.BindingSource(this.components);
             this.idSupportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titreSupportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.realisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsSupport = new System.Windows.Forms.BindingSource(this.components);
             this.bsClient = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsClient)).BeginInit();
@@ -43,6 +44,7 @@
             // 
             // cbClient
             // 
+            this.cbClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClient.FormattingEnabled = true;
             this.cbClient.Location = new System.Drawing.Point(34, 33);
             this.cbClient.Name = "cbClient";
@@ -58,14 +60,10 @@
             this.titreSupportDataGridViewTextBoxColumn,
             this.realisateurDataGridViewTextBoxColumn});
             this.dgSupport.DataSource = this.bsSupport;
-            this.dgSupport.Location = new System.Drawing.Point(189, 95);
+            this.dgSupport.Location = new System.Drawing.Point(171, 91);
             this.dgSupport.Name = "dgSupport";
             this.dgSupport.Size = new System.Drawing.Size(408, 282);
             this.dgSupport.TabIndex = 1;
-            // 
-            // bsSupport
-            // 
-            this.bsSupport.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.support);
             // 
             // idSupportDataGridViewTextBoxColumn
             // 
@@ -85,9 +83,23 @@
             this.realisateurDataGridViewTextBoxColumn.HeaderText = "realisateur";
             this.realisateurDataGridViewTextBoxColumn.Name = "realisateurDataGridViewTextBoxColumn";
             // 
+            // bsSupport
+            // 
+            this.bsSupport.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.support);
+            // 
             // bsClient
             // 
             this.bsClient.CurrentChanged += new System.EventHandler(this.bsClient_CurrentChanged);
+            // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(654, 220);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(96, 40);
+            this.btnRetour.TabIndex = 2;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
             // vueParClient
             // 
@@ -96,6 +108,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.dgSupport);
             this.Controls.Add(this.cbClient);
             this.Name = "vueParClient";
@@ -116,5 +129,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn realisateurDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bsSupport;
         private System.Windows.Forms.BindingSource bsClient;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

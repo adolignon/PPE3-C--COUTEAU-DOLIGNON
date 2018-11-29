@@ -244,14 +244,14 @@
             // ajoutToolStripMenuItem2
             // 
             this.ajoutToolStripMenuItem2.Name = "ajoutToolStripMenuItem2";
-            this.ajoutToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.ajoutToolStripMenuItem2.Size = new System.Drawing.Size(142, 22);
             this.ajoutToolStripMenuItem2.Text = "Ajout";
             this.ajoutToolStripMenuItem2.Click += new System.EventHandler(this.ajoutToolStripMenuItem2_Click);
             // 
             // modificationToolStripMenuItem2
             // 
             this.modificationToolStripMenuItem2.Name = "modificationToolStripMenuItem2";
-            this.modificationToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.modificationToolStripMenuItem2.Size = new System.Drawing.Size(142, 22);
             this.modificationToolStripMenuItem2.Text = "Modification";
             this.modificationToolStripMenuItem2.Click += new System.EventHandler(this.modificationToolStripMenuItem2_Click);
             // 
@@ -267,14 +267,16 @@
             // ajoutToolStripMenuItem3
             // 
             this.ajoutToolStripMenuItem3.Name = "ajoutToolStripMenuItem3";
-            this.ajoutToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
+            this.ajoutToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.ajoutToolStripMenuItem3.Text = "Ajout";
+            this.ajoutToolStripMenuItem3.Click += new System.EventHandler(this.ajoutToolStripMenuItem3_Click);
             // 
             // modificationToolStripMenuItem3
             // 
             this.modificationToolStripMenuItem3.Name = "modificationToolStripMenuItem3";
-            this.modificationToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
+            this.modificationToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.modificationToolStripMenuItem3.Text = "Modification";
+            this.modificationToolStripMenuItem3.Click += new System.EventHandler(this.modificationToolStripMenuItem3_Click);
             // 
             // clientToolStripMenuItem
             // 

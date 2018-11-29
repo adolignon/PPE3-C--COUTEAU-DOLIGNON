@@ -44,12 +44,14 @@
             this.tbDurée = new System.Windows.Forms.TextBox();
             this.cbFilm = new System.Windows.Forms.ComboBox();
             this.bsFilm = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFilm)).BeginInit();
             this.SuspendLayout();
             // 
             // cbGenre
             // 
+            this.cbGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenre.FormattingEnabled = true;
             this.cbGenre.Location = new System.Drawing.Point(173, 131);
             this.cbGenre.Name = "cbGenre";
@@ -180,15 +182,25 @@
             // 
             // cbFilm
             // 
+            this.cbFilm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFilm.FormattingEnabled = true;
             this.cbFilm.Location = new System.Drawing.Point(54, 72);
             this.cbFilm.Name = "cbFilm";
-            this.cbFilm.Size = new System.Drawing.Size(168, 21);
+            this.cbFilm.Size = new System.Drawing.Size(142, 21);
             this.cbFilm.TabIndex = 16;
             // 
             // bsFilm
             // 
             this.bsFilm.CurrentChanged += new System.EventHandler(this.bsFilm_CurrentChanged);
+            // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(516, 207);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(106, 35);
+            this.btnRetour.TabIndex = 17;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
             // 
             // vueModifFilm
             // 
@@ -197,6 +209,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.cbFilm);
             this.Controls.Add(this.tbDurée);
             this.Controls.Add(this.btnAdd);
@@ -236,5 +249,6 @@
         private System.Windows.Forms.TextBox tbDurée;
         private System.Windows.Forms.ComboBox cbFilm;
         private System.Windows.Forms.BindingSource bsFilm;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

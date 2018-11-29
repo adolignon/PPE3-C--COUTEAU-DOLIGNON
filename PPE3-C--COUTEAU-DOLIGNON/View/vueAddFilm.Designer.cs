@@ -42,11 +42,13 @@
             this.bsGenre = new System.Windows.Forms.BindingSource(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.tbDurée = new System.Windows.Forms.TextBox();
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).BeginInit();
             this.SuspendLayout();
             // 
             // cbGenre
             // 
+            this.cbGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenre.FormattingEnabled = true;
             this.cbGenre.Location = new System.Drawing.Point(173, 66);
             this.cbGenre.Name = "cbGenre";
@@ -175,6 +177,16 @@
             this.tbDurée.Size = new System.Drawing.Size(100, 20);
             this.tbDurée.TabIndex = 15;
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(531, 143);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(98, 36);
+            this.btnRetour.TabIndex = 16;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // vueAddFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +194,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.tbDurée);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnUpload);
@@ -217,5 +230,6 @@
         private System.Windows.Forms.BindingSource bsGenre;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox tbDurée;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

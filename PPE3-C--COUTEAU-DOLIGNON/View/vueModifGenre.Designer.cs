@@ -33,11 +33,13 @@
             this.cbGenre = new System.Windows.Forms.ComboBox();
             this.tbLibelleGenre = new System.Windows.Forms.TextBox();
             this.btnModif = new System.Windows.Forms.Button();
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).BeginInit();
             this.SuspendLayout();
             // 
             // cbGenre
             // 
+            this.cbGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenre.FormattingEnabled = true;
             this.cbGenre.Location = new System.Drawing.Point(316, 74);
             this.cbGenre.Name = "cbGenre";
@@ -61,6 +63,16 @@
             this.btnModif.UseVisualStyleBackColor = true;
             this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(583, 220);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(93, 32);
+            this.btnRetour.TabIndex = 3;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // vueModifGenre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -68,6 +80,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnModif);
             this.Controls.Add(this.tbLibelleGenre);
             this.Controls.Add(this.cbGenre);
@@ -85,5 +98,6 @@
         private System.Windows.Forms.ComboBox cbGenre;
         private System.Windows.Forms.TextBox tbLibelleGenre;
         private System.Windows.Forms.Button btnModif;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

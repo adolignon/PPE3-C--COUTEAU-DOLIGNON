@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueModifSerie));
             this.cbGenre = new System.Windows.Forms.ComboBox();
             this.lbModif = new System.Windows.Forms.Label();
             this.lblImage = new System.Windows.Forms.Label();
@@ -42,16 +43,18 @@
             this.bsGenre = new System.Windows.Forms.BindingSource(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.tbResume = new System.Windows.Forms.TextBox();
-            this.cbFilm = new System.Windows.Forms.ComboBox();
+            this.cbSerie = new System.Windows.Forms.ComboBox();
             this.bsSerie = new System.Windows.Forms.BindingSource(this.components);
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSerie)).BeginInit();
             this.SuspendLayout();
             // 
             // cbGenre
             // 
+            this.cbGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenre.FormattingEnabled = true;
-            this.cbGenre.Location = new System.Drawing.Point(173, 131);
+            this.cbGenre.Location = new System.Drawing.Point(198, 133);
             this.cbGenre.Name = "cbGenre";
             this.cbGenre.Size = new System.Drawing.Size(121, 21);
             this.cbGenre.TabIndex = 0;
@@ -65,9 +68,9 @@
             this.lbModif.Location = new System.Drawing.Point(334, 23);
             this.lbModif.Name = "lbModif";
             this.lbModif.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbModif.Size = new System.Drawing.Size(153, 24);
+            this.lbModif.Size = new System.Drawing.Size(179, 24);
             this.lbModif.TabIndex = 1;
-            this.lbModif.Text = "Modifier un film";
+            this.lbModif.Text = "Modifier une série";
             // 
             // lblImage
             // 
@@ -114,12 +117,12 @@
             this.lblNom.BackColor = System.Drawing.Color.Transparent;
             this.lblNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNom.ForeColor = System.Drawing.Color.White;
-            this.lblNom.Location = new System.Drawing.Point(12, 170);
+            this.lblNom.Location = new System.Drawing.Point(12, 171);
             this.lblNom.Name = "lblNom";
             this.lblNom.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNom.Size = new System.Drawing.Size(134, 24);
+            this.lblNom.Size = new System.Drawing.Size(170, 24);
             this.lblNom.TabIndex = 5;
-            this.lblNom.Text = "Nom du film :";
+            this.lblNom.Text = "Nom de la série :";
             // 
             // lblGenre
             // 
@@ -136,7 +139,7 @@
             // 
             // tbNom
             // 
-            this.tbNom.Location = new System.Drawing.Point(173, 173);
+            this.tbNom.Location = new System.Drawing.Point(198, 171);
             this.tbNom.MaxLength = 150;
             this.tbNom.Name = "tbNom";
             this.tbNom.Size = new System.Drawing.Size(100, 20);
@@ -144,7 +147,7 @@
             // 
             // tbRealisateur
             // 
-            this.tbRealisateur.Location = new System.Drawing.Point(173, 212);
+            this.tbRealisateur.Location = new System.Drawing.Point(198, 210);
             this.tbRealisateur.MaxLength = 60;
             this.tbRealisateur.Name = "tbRealisateur";
             this.tbRealisateur.Size = new System.Drawing.Size(100, 20);
@@ -172,24 +175,35 @@
             // 
             // tbResume
             // 
-            this.tbResume.Location = new System.Drawing.Point(173, 246);
+            this.tbResume.Location = new System.Drawing.Point(198, 244);
             this.tbResume.MaxLength = 150;
             this.tbResume.Multiline = true;
             this.tbResume.Name = "tbResume";
             this.tbResume.Size = new System.Drawing.Size(285, 69);
             this.tbResume.TabIndex = 15;
             // 
-            // cbFilm
+            // cbSerie
             // 
-            this.cbFilm.FormattingEnabled = true;
-            this.cbFilm.Location = new System.Drawing.Point(54, 72);
-            this.cbFilm.Name = "cbFilm";
-            this.cbFilm.Size = new System.Drawing.Size(168, 21);
-            this.cbFilm.TabIndex = 16;
+            this.cbSerie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSerie.FormattingEnabled = true;
+            this.cbSerie.Location = new System.Drawing.Point(54, 72);
+            this.cbSerie.Name = "cbSerie";
+            this.cbSerie.Size = new System.Drawing.Size(109, 21);
+            this.cbSerie.TabIndex = 16;
             // 
             // bsSerie
             // 
             this.bsSerie.CurrentChanged += new System.EventHandler(this.bsFilm_CurrentChanged);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(599, 207);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(89, 39);
+            this.btnClose.TabIndex = 17;
+            this.btnClose.Text = "Retour";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // vueModifSerie
             // 
@@ -198,7 +212,8 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbFilm);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.cbSerie);
             this.Controls.Add(this.tbResume);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnUpload);
@@ -211,8 +226,9 @@
             this.Controls.Add(this.lblImage);
             this.Controls.Add(this.lbModif);
             this.Controls.Add(this.cbGenre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueModifSerie";
-            this.Text = "vueAddFilm";
+            this.Text = "Modifier une série";
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSerie)).EndInit();
             this.ResumeLayout(false);
@@ -235,7 +251,8 @@
         private System.Windows.Forms.BindingSource bsGenre;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox tbResume;
-        private System.Windows.Forms.ComboBox cbFilm;
+        private System.Windows.Forms.ComboBox cbSerie;
         private System.Windows.Forms.BindingSource bsSerie;
+        private System.Windows.Forms.Button btnClose;
     }
 }

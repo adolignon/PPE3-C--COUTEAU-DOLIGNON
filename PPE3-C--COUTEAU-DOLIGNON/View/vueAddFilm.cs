@@ -59,5 +59,10 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
                 MessageBox.Show("Merci de remplir tous les champs");
             }
         }
+
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

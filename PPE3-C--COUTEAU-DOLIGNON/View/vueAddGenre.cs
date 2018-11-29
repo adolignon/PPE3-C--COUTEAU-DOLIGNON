@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PPE3_C__COUTEAU_DOLIGNON.View
 {
-    public partial class vueAddGenre : Form
+    public partial class btnRetour : Form
     {
-        public vueAddGenre()
+        public btnRetour()
         {
             InitializeComponent();
         }
@@ -26,6 +26,11 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
                 MessageBox.Show("Ajouté !");
                 this.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

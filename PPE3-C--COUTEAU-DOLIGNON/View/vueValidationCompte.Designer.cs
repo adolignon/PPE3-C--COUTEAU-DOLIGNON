@@ -32,11 +32,13 @@
             this.cbClients = new System.Windows.Forms.ComboBox();
             this.btnValidCompte = new System.Windows.Forms.Button();
             this.bsClients = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsClients)).BeginInit();
             this.SuspendLayout();
             // 
             // cbClients
             // 
+            this.cbClients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClients.FormattingEnabled = true;
             this.cbClients.Location = new System.Drawing.Point(284, 167);
             this.cbClients.Name = "cbClients";
@@ -57,6 +59,16 @@
             // 
             this.bsClients.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.client);
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(600, 313);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(105, 35);
+            this.btnRetour.TabIndex = 2;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // vueValidationCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -64,6 +76,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 502);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnValidCompte);
             this.Controls.Add(this.cbClients);
             this.Name = "vueValidationCompte";
@@ -79,5 +92,6 @@
         private System.Windows.Forms.BindingSource bsClients;
         private System.Windows.Forms.ComboBox cbClients;
         private System.Windows.Forms.Button btnValidCompte;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

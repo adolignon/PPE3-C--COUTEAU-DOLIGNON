@@ -32,6 +32,7 @@
             this.cbDate = new System.Windows.Forms.ComboBox();
             this.dgSupport = new System.Windows.Forms.DataGridView();
             this.bsDate = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRetour = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +44,7 @@
             // 
             // cbDate
             // 
+            this.cbDate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDate.FormattingEnabled = true;
             this.cbDate.Location = new System.Drawing.Point(68, 25);
             this.cbDate.Name = "cbDate";
@@ -58,7 +60,7 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.dgSupport.DataSource = this.bsSupport;
-            this.dgSupport.Location = new System.Drawing.Point(199, 107);
+            this.dgSupport.Location = new System.Drawing.Point(173, 105);
             this.dgSupport.Name = "dgSupport";
             this.dgSupport.Size = new System.Drawing.Size(404, 257);
             this.dgSupport.TabIndex = 2;
@@ -66,6 +68,16 @@
             // bsDate
             // 
             this.bsDate.CurrentChanged += new System.EventHandler(this.bsDate_CurrentChanged);
+            // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(638, 235);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(89, 35);
+            this.btnRetour.TabIndex = 3;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -96,6 +108,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.dgSupport);
             this.Controls.Add(this.cbDate);
             this.Name = "vueParDateAbonnement";
@@ -116,5 +129,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.BindingSource bsDate;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

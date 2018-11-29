@@ -1,6 +1,6 @@
 ﻿namespace PPE3_C__COUTEAU_DOLIGNON.View
 {
-    partial class vueAddGenre
+    partial class btnRetour
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.tbGenre = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
             this.labelAdd = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbGenre
@@ -64,17 +65,28 @@
             this.labelAdd.TabIndex = 2;
             this.labelAdd.Text = "Ajouter un genre :";
             // 
-            // vueAddGenre
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(586, 189);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 38);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Retour";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRetour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelAdd);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.tbGenre);
-            this.Name = "vueAddGenre";
+            this.Name = "btnRetour";
             this.Text = "vueAddGenre";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -86,5 +98,6 @@
         private System.Windows.Forms.TextBox tbGenre;
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.Label labelAdd;
+        private System.Windows.Forms.Button button1;
     }
 }

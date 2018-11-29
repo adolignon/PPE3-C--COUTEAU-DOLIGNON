@@ -102,6 +102,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\vueAddSaison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueAddSaison.Designer.cs">
+      <DependentUpon>vueAddSaison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\vueModifSaison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueModifSaison.Designer.cs">
+      <DependentUpon>vueModifSaison.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\vueModifSerie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +205,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\vueAddSaison.resx">
+      <DependentUpon>vueAddSaison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueModifSaison.resx">
+      <DependentUpon>vueModifSaison.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\vueModifSerie.resx">
       <DependentUpon>vueModifSerie.cs</DependentUpon>
     </EmbeddedResource>

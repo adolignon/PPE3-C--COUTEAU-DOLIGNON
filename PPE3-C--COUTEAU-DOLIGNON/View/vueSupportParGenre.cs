@@ -32,5 +32,10 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
         {
 
         }
+
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
