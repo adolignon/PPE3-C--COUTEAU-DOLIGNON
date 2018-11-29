@@ -102,6 +102,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\vueModifSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueModifSerie.Designer.cs">
+      <DependentUpon>vueModifSerie.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\vueModifFilm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\vueModifSerie.resx">
+      <DependentUpon>vueModifSerie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\vueModifFilm.resx">
       <DependentUpon>vueModifFilm.cs</DependentUpon>
     </EmbeddedResource>

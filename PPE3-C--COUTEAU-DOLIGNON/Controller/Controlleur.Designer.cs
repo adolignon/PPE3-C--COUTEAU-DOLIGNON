@@ -221,14 +221,14 @@
             // ajoutToolStripMenuItem1
             // 
             this.ajoutToolStripMenuItem1.Name = "ajoutToolStripMenuItem1";
-            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.ajoutToolStripMenuItem1.Text = "Ajout";
             this.ajoutToolStripMenuItem1.Click += new System.EventHandler(this.ajoutToolStripMenuItem1_Click);
             // 
             // modificationToolStripMenuItem1
             // 
             this.modificationToolStripMenuItem1.Name = "modificationToolStripMenuItem1";
-            this.modificationToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.modificationToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.modificationToolStripMenuItem1.Text = "Modification";
             this.modificationToolStripMenuItem1.Click += new System.EventHandler(this.modificationToolStripMenuItem1_Click);
             // 
@@ -253,6 +253,7 @@
             this.modificationToolStripMenuItem2.Name = "modificationToolStripMenuItem2";
             this.modificationToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.modificationToolStripMenuItem2.Text = "Modification";
+            this.modificationToolStripMenuItem2.Click += new System.EventHandler(this.modificationToolStripMenuItem2_Click);
             // 
             // saisonToolStripMenuItem
             // 

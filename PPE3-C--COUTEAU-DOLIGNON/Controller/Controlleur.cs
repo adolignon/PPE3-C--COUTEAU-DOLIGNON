@@ -94,5 +94,11 @@ namespace PPE3_C__COUTEAU_DOLIGNON
             vueModifFilm laVue = new vueModifFilm();
             laVue.Show();
         }
+
+        private void modificationToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            vueModifSerie laVue = new vueModifSerie();
+            laVue.Show();
+        }
     }
 }

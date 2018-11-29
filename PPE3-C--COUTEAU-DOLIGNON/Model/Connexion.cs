@@ -73,6 +73,16 @@ namespace PPE3_C__COUTEAU_DOLIGNON.Model
             return maConnexion.emprunt.ToList();
         }
 
+        internal static void modifierSerie(support current, string nom, string realisateur, int idGenre, string resume, string image)
+        {
+            maConnexion.support.Find(current.idSupport).titreSupport = nom;
+            maConnexion.support.Find(current.idSupport).realisateur = realisateur;
+            maConnexion.support.Find(current.idSupport).image = image;
+            maConnexion.support.Find(current.idSupport).idGenre = idGenre;
+            maConnexion.serie.Find(current.idSupport).resumeSerie = resume;
+            maConnexion.SaveChanges();
+        }
+
         internal static void modifierFilm(support current, string nom, string realisateur, int idGenre, string duree, string image)
         {
             maConnexion.support.Find(current.idSupport).titreSupport = nom;
