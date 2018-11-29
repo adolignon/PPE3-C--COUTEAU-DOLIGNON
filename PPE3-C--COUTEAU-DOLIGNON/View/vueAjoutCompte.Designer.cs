@@ -45,6 +45,7 @@
             this.btnCreaCompte = new System.Windows.Forms.Button();
             this.lblConfirmPwd = new System.Windows.Forms.Label();
             this.tbConfirmPwd = new System.Windows.Forms.TextBox();
+            this.btnRetour = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCreaCompte
@@ -218,6 +219,16 @@
             this.tbConfirmPwd.Size = new System.Drawing.Size(189, 20);
             this.tbConfirmPwd.TabIndex = 15;
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(628, 314);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(113, 44);
+            this.btnRetour.TabIndex = 16;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // vueAjoutCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +236,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.tbConfirmPwd);
             this.Controls.Add(this.lblConfirmPwd);
             this.Controls.Add(this.btnCreaCompte);
@@ -268,5 +280,6 @@
         private System.Windows.Forms.Button btnCreaCompte;
         private System.Windows.Forms.Label lblConfirmPwd;
         private System.Windows.Forms.TextBox tbConfirmPwd;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

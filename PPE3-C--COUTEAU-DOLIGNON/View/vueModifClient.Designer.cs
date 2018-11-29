@@ -46,6 +46,7 @@
             this.lblNomCli = new System.Windows.Forms.Label();
             this.lblModifCompte = new System.Windows.Forms.Label();
             this.bsClients = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsClients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,6 +211,16 @@
             this.bsClients.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.client);
             this.bsClients.CurrentChanged += new System.EventHandler(this.bsClients_CurrentChanged);
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(592, 285);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(118, 40);
+            this.btnRetour.TabIndex = 29;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // vueModifClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,6 +228,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.tbPwd);
             this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.tbEmail);
@@ -259,5 +271,6 @@
         private System.Windows.Forms.Label lblPrenomCli;
         private System.Windows.Forms.Label lblNomCli;
         private System.Windows.Forms.Label lblModifCompte;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

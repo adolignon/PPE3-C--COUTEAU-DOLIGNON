@@ -54,5 +54,10 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
             tbLogin.Text = ((client)bsClients.Current).login.Trim();
             tbPwd.Text = ((client)bsClients.Current).pwd.Trim();
         }
+
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

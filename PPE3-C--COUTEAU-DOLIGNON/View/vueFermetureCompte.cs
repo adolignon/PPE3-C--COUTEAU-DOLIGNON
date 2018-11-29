@@ -34,5 +34,10 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
                 this.Close();
             }
         }
+
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

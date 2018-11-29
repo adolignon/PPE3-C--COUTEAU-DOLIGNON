@@ -33,6 +33,7 @@
             this.bsFermCompte = new System.Windows.Forms.BindingSource(this.components);
             this.cbFermClient = new System.Windows.Forms.ComboBox();
             this.btnFermCompte = new System.Windows.Forms.Button();
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsFermCompte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +60,16 @@
             this.btnFermCompte.UseVisualStyleBackColor = true;
             this.btnFermCompte.Click += new System.EventHandler(this.btnFermCompte_Click);
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(598, 192);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(99, 36);
+            this.btnRetour.TabIndex = 2;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // vueFermetureCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -66,6 +77,7 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 613);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnFermCompte);
             this.Controls.Add(this.cbFermClient);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -82,5 +94,6 @@
         private System.Windows.Forms.BindingSource bsFermCompte;
         private System.Windows.Forms.ComboBox cbFermClient;
         private System.Windows.Forms.Button btnFermCompte;
+        private System.Windows.Forms.Button btnRetour;
     }
 }
