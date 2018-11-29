@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueSupportParGenre));
             this.cbGenre = new System.Windows.Forms.ComboBox();
             this.dgSupport = new System.Windows.Forms.DataGridView();
             this.bsGenre = new System.Windows.Forms.BindingSource(this.components);
@@ -111,8 +112,9 @@
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.dgSupport);
             this.Controls.Add(this.cbGenre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueSupportParGenre";
-            this.Text = "vueSupportParGenre";
+            this.Text = "Affichage par genre";
             this.Load += new System.EventHandler(this.vueSupportParGenre_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).EndInit();

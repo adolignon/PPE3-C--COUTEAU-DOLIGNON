@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueParReferenceClient));
             this.cbRef = new System.Windows.Forms.ComboBox();
             this.dgSupport = new System.Windows.Forms.DataGridView();
+            this.bsRef = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRetour = new System.Windows.Forms.Button();
             this.idSupportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titreSupportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.realisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsSupport = new System.Windows.Forms.BindingSource(this.components);
-            this.bsRef = new System.Windows.Forms.BindingSource(this.components);
-            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRef)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).BeginInit();
             this.SuspendLayout();
             // 
             // cbRef
@@ -65,6 +66,20 @@
             this.dgSupport.Size = new System.Drawing.Size(391, 227);
             this.dgSupport.TabIndex = 1;
             // 
+            // bsRef
+            // 
+            this.bsRef.CurrentChanged += new System.EventHandler(this.bsRef_CurrentChanged);
+            // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(630, 246);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(95, 39);
+            this.btnRetour.TabIndex = 2;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // idSupportDataGridViewTextBoxColumn
             // 
             this.idSupportDataGridViewTextBoxColumn.DataPropertyName = "idSupport";
@@ -87,20 +102,6 @@
             // 
             this.bsSupport.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.support);
             // 
-            // bsRef
-            // 
-            this.bsRef.CurrentChanged += new System.EventHandler(this.bsRef_CurrentChanged);
-            // 
-            // btnRetour
-            // 
-            this.btnRetour.Location = new System.Drawing.Point(630, 246);
-            this.btnRetour.Name = "btnRetour";
-            this.btnRetour.Size = new System.Drawing.Size(95, 39);
-            this.btnRetour.TabIndex = 2;
-            this.btnRetour.Text = "Retour";
-            this.btnRetour.UseVisualStyleBackColor = true;
-            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
-            // 
             // vueParReferenceClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,11 +112,12 @@
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.dgSupport);
             this.Controls.Add(this.cbRef);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueParReferenceClient";
-            this.Text = "vueParReferenceClient";
+            this.Text = "Affichage par référence client";
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRef)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueVerificationCompte));
             this.cbActifInactif = new System.Windows.Forms.ComboBox();
             this.lbVerifClient = new System.Windows.Forms.ListBox();
             this.bsVerifClient = new System.Windows.Forms.BindingSource(this.components);
@@ -82,8 +83,9 @@
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.lbVerifClient);
             this.Controls.Add(this.cbActifInactif);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueVerificationCompte";
-            this.Text = "vueVerificationCompte";
+            this.Text = "Vérification d\'un compte";
             this.Load += new System.EventHandler(this.vueVerificationCompte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsVerifClient)).EndInit();
             this.ResumeLayout(false);

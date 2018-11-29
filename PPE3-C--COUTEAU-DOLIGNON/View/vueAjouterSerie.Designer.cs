@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueAjouterSerie));
             this.lblAdd = new System.Windows.Forms.Label();
             this.lblResume = new System.Windows.Forms.Label();
             this.lblRealisateur = new System.Windows.Forms.Label();
@@ -202,8 +203,9 @@
             this.Controls.Add(this.lblRealisateur);
             this.Controls.Add(this.lblResume);
             this.Controls.Add(this.lblAdd);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueAjouterSerie";
-            this.Text = "vueAjouterSerie";
+            this.Text = "Ajouter une série";
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

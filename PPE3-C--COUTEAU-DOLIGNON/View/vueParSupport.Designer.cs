@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueParSupport));
             this.dgSupport = new System.Windows.Forms.DataGridView();
+            this.cbSupport = new System.Windows.Forms.ComboBox();
+            this.btnRetour = new System.Windows.Forms.Button();
             this.idSupportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titreSupportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.realisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsSupport = new System.Windows.Forms.BindingSource(this.components);
-            this.cbSupport = new System.Windows.Forms.ComboBox();
-            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).BeginInit();
             this.SuspendLayout();
@@ -53,28 +54,6 @@
             this.dgSupport.Name = "dgSupport";
             this.dgSupport.Size = new System.Drawing.Size(410, 253);
             this.dgSupport.TabIndex = 0;
-            // 
-            // idSupportDataGridViewTextBoxColumn
-            // 
-            this.idSupportDataGridViewTextBoxColumn.DataPropertyName = "idSupport";
-            this.idSupportDataGridViewTextBoxColumn.HeaderText = "idSupport";
-            this.idSupportDataGridViewTextBoxColumn.Name = "idSupportDataGridViewTextBoxColumn";
-            // 
-            // titreSupportDataGridViewTextBoxColumn
-            // 
-            this.titreSupportDataGridViewTextBoxColumn.DataPropertyName = "titreSupport";
-            this.titreSupportDataGridViewTextBoxColumn.HeaderText = "titreSupport";
-            this.titreSupportDataGridViewTextBoxColumn.Name = "titreSupportDataGridViewTextBoxColumn";
-            // 
-            // realisateurDataGridViewTextBoxColumn
-            // 
-            this.realisateurDataGridViewTextBoxColumn.DataPropertyName = "realisateur";
-            this.realisateurDataGridViewTextBoxColumn.HeaderText = "realisateur";
-            this.realisateurDataGridViewTextBoxColumn.Name = "realisateurDataGridViewTextBoxColumn";
-            // 
-            // bsSupport
-            // 
-            this.bsSupport.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.support);
             // 
             // cbSupport
             // 
@@ -99,6 +78,28 @@
             this.btnRetour.UseVisualStyleBackColor = true;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
+            // idSupportDataGridViewTextBoxColumn
+            // 
+            this.idSupportDataGridViewTextBoxColumn.DataPropertyName = "idSupport";
+            this.idSupportDataGridViewTextBoxColumn.HeaderText = "idSupport";
+            this.idSupportDataGridViewTextBoxColumn.Name = "idSupportDataGridViewTextBoxColumn";
+            // 
+            // titreSupportDataGridViewTextBoxColumn
+            // 
+            this.titreSupportDataGridViewTextBoxColumn.DataPropertyName = "titreSupport";
+            this.titreSupportDataGridViewTextBoxColumn.HeaderText = "titreSupport";
+            this.titreSupportDataGridViewTextBoxColumn.Name = "titreSupportDataGridViewTextBoxColumn";
+            // 
+            // realisateurDataGridViewTextBoxColumn
+            // 
+            this.realisateurDataGridViewTextBoxColumn.DataPropertyName = "realisateur";
+            this.realisateurDataGridViewTextBoxColumn.HeaderText = "realisateur";
+            this.realisateurDataGridViewTextBoxColumn.Name = "realisateurDataGridViewTextBoxColumn";
+            // 
+            // bsSupport
+            // 
+            this.bsSupport.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.support);
+            // 
             // vueParSupport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,8 +110,9 @@
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.cbSupport);
             this.Controls.Add(this.dgSupport);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueParSupport";
-            this.Text = "vueParSupport";
+            this.Text = "Affichage par support";
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).EndInit();
             this.ResumeLayout(false);

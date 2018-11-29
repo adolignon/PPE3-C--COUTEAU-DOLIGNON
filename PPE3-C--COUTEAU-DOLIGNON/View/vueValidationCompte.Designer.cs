@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueValidationCompte));
             this.cbClients = new System.Windows.Forms.ComboBox();
             this.btnValidCompte = new System.Windows.Forms.Button();
-            this.bsClients = new System.Windows.Forms.BindingSource(this.components);
             this.btnRetour = new System.Windows.Forms.Button();
+            this.bsClients = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsClients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,10 +56,6 @@
             this.btnValidCompte.UseVisualStyleBackColor = true;
             this.btnValidCompte.Click += new System.EventHandler(this.btnValidCompte_Click);
             // 
-            // bsClients
-            // 
-            this.bsClients.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.client);
-            // 
             // btnRetour
             // 
             this.btnRetour.Location = new System.Drawing.Point(600, 313);
@@ -68,6 +65,10 @@
             this.btnRetour.Text = "Retour";
             this.btnRetour.UseVisualStyleBackColor = true;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
+            // bsClients
+            // 
+            this.bsClients.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.client);
             // 
             // vueValidationCompte
             // 
@@ -79,8 +80,9 @@
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnValidCompte);
             this.Controls.Add(this.cbClients);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueValidationCompte";
-            this.Text = "vueValidationCompte";
+            this.Text = "Validation d\'un Compte";
             this.Load += new System.EventHandler(this.vueValidationCompte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsClients)).EndInit();
             this.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnRetour));
             this.tbGenre = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
             this.labelAdd = new System.Windows.Forms.Label();
@@ -86,8 +87,9 @@
             this.Controls.Add(this.labelAdd);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.tbGenre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "btnRetour";
-            this.Text = "vueAddGenre";
+            this.Text = "Ajouter un genre";
             this.ResumeLayout(false);
             this.PerformLayout();
 

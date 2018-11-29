@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueModifGenre));
             this.bsGenre = new System.Windows.Forms.BindingSource(this.components);
             this.cbGenre = new System.Windows.Forms.ComboBox();
             this.tbLibelleGenre = new System.Windows.Forms.TextBox();
@@ -84,8 +85,9 @@
             this.Controls.Add(this.btnModif);
             this.Controls.Add(this.tbLibelleGenre);
             this.Controls.Add(this.cbGenre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueModifGenre";
-            this.Text = "vueModifGenre";
+            this.Text = "Modifier un genre";
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

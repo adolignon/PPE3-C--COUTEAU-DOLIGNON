@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueParDateAbonnement));
             this.cbDate = new System.Windows.Forms.ComboBox();
             this.dgSupport = new System.Windows.Forms.DataGridView();
             this.bsDate = new System.Windows.Forms.BindingSource(this.components);
@@ -111,8 +112,9 @@
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.dgSupport);
             this.Controls.Add(this.cbDate);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueParDateAbonnement";
-            this.Text = "vueParDateAbonnement";
+            this.Text = "Affichage par date d\'abonnement";
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).EndInit();
