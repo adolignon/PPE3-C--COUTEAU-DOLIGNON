@@ -1,0 +1,29 @@
+﻿using PPE3_C__COUTEAU_DOLIGNON.Model;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PPE3_C__COUTEAU_DOLIGNON.View
+{
+    public partial class vueFermetureCompte : Form
+    {
+        public vueFermetureCompte()
+        {
+            InitializeComponent();
+            bsFermCompte.DataSource = Connexion.ListeDesClients();
+            cbFermClient.DataSource = bsFermCompte;
+            cbFermClient.DisplayMember = "login";
+        }
+
+        private void vueFermetureCompte_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

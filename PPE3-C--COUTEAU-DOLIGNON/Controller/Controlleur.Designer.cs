@@ -153,18 +153,21 @@
             this.validationDunCompteToolStripMenuItem.Name = "validationDunCompteToolStripMenuItem";
             this.validationDunCompteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.validationDunCompteToolStripMenuItem.Text = "Validation d\'un compte";
+            this.validationDunCompteToolStripMenuItem.Click += new System.EventHandler(this.validationDunCompteToolStripMenuItem_Click);
             // 
             // vérificationDunCompteToolStripMenuItem
             // 
             this.vérificationDunCompteToolStripMenuItem.Name = "vérificationDunCompteToolStripMenuItem";
             this.vérificationDunCompteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.vérificationDunCompteToolStripMenuItem.Text = "Vérification d\'un compte";
+            this.vérificationDunCompteToolStripMenuItem.Click += new System.EventHandler(this.vérificationDunCompteToolStripMenuItem_Click);
             // 
             // fermetureDunCompteToolStripMenuItem
             // 
             this.fermetureDunCompteToolStripMenuItem.Name = "fermetureDunCompteToolStripMenuItem";
             this.fermetureDunCompteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.fermetureDunCompteToolStripMenuItem.Text = "Fermeture d\'un compte";
+            this.fermetureDunCompteToolStripMenuItem.Click += new System.EventHandler(this.fermetureDunCompteToolStripMenuItem_Click);
             // 
             // ajoutDunCompteToolStripMenuItem
             // 

@@ -132,6 +132,18 @@
     <Compile Include="View\vueSupportParGenre.Designer.cs">
       <DependentUpon>vueSupportParGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\vueValidationCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueValidationCompte.Designer.cs">
+      <DependentUpon>vueValidationCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\vueVerificationCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueVerificationCompte.Designer.cs">
+      <DependentUpon>vueVerificationCompte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controller\Controlleur.resx">
       <DependentUpon>Controlleur.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\vueSupportParGenre.resx">
       <DependentUpon>vueSupportParGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueValidationCompte.resx">
+      <DependentUpon>vueValidationCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueVerificationCompte.resx">
+      <DependentUpon>vueVerificationCompte.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\ModelDonnées.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
