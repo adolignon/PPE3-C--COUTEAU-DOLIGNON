@@ -31,6 +31,7 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueAddSaison));
             this.cbSerie = new System.Windows.Forms.ComboBox();
             this.lblAdd = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -154,6 +155,7 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAdd);
             this.Controls.Add(this.cbSerie);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueAddSaison";
             this.Text = "Ajouter une saison";
             ((System.ComponentModel.ISupportInitialize)(this.bsSerie)).EndInit();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueModifFilm));
             this.cbGenre = new System.Windows.Forms.ComboBox();
             this.lbModif = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -223,8 +224,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbModif);
             this.Controls.Add(this.cbGenre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueModifFilm";
-            this.Text = "vueAddFilm";
+            this.Text = "Modifier un film";
             ((System.ComponentModel.ISupportInitialize)(this.bsGenre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFilm)).EndInit();
             this.ResumeLayout(false);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueFermetureCompte));
             this.bsFermCompte = new System.Windows.Forms.BindingSource(this.components);
             this.cbFermClient = new System.Windows.Forms.ComboBox();
             this.btnFermCompte = new System.Windows.Forms.Button();
@@ -67,6 +68,7 @@
             this.ClientSize = new System.Drawing.Size(800, 613);
             this.Controls.Add(this.btnFermCompte);
             this.Controls.Add(this.cbFermClient);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueFermetureCompte";
             this.Text = "Fermer un compte";
             this.Load += new System.EventHandler(this.vueFermetureCompte_Load);

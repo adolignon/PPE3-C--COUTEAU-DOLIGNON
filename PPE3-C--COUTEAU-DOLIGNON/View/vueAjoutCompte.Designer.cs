@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueAjoutCompte));
             this.lblCreaCompte = new System.Windows.Forms.Label();
             this.lblNomCli = new System.Windows.Forms.Label();
             this.lblPrenomCli = new System.Windows.Forms.Label();
@@ -140,6 +141,7 @@
             // tbNomCli
             // 
             this.tbNomCli.Location = new System.Drawing.Point(156, 95);
+            this.tbNomCli.MaxLength = 60;
             this.tbNomCli.Name = "tbNomCli";
             this.tbNomCli.Size = new System.Drawing.Size(189, 20);
             this.tbNomCli.TabIndex = 7;
@@ -147,6 +149,7 @@
             // tbPrenomCli
             // 
             this.tbPrenomCli.Location = new System.Drawing.Point(156, 153);
+            this.tbPrenomCli.MaxLength = 60;
             this.tbPrenomCli.Name = "tbPrenomCli";
             this.tbPrenomCli.Size = new System.Drawing.Size(189, 20);
             this.tbPrenomCli.TabIndex = 8;
@@ -161,6 +164,7 @@
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(156, 261);
+            this.tbEmail.MaxLength = 32;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(189, 20);
             this.tbEmail.TabIndex = 10;
@@ -168,6 +172,7 @@
             // tbLogin
             // 
             this.tbLogin.Location = new System.Drawing.Point(590, 96);
+            this.tbLogin.MaxLength = 30;
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(189, 20);
             this.tbLogin.TabIndex = 11;
@@ -175,6 +180,7 @@
             // tbPwd
             // 
             this.tbPwd.Location = new System.Drawing.Point(590, 153);
+            this.tbPwd.MaxLength = 30;
             this.tbPwd.Name = "tbPwd";
             this.tbPwd.PasswordChar = '*';
             this.tbPwd.Size = new System.Drawing.Size(189, 20);
@@ -206,6 +212,7 @@
             // tbConfirmPwd
             // 
             this.tbConfirmPwd.Location = new System.Drawing.Point(590, 208);
+            this.tbConfirmPwd.MaxLength = 30;
             this.tbConfirmPwd.Name = "tbConfirmPwd";
             this.tbConfirmPwd.PasswordChar = '*';
             this.tbConfirmPwd.Size = new System.Drawing.Size(189, 20);
@@ -234,6 +241,7 @@
             this.Controls.Add(this.lblPrenomCli);
             this.Controls.Add(this.lblNomCli);
             this.Controls.Add(this.lblCreaCompte);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueAjoutCompte";
             this.Text = "Ajouter un compte";
             this.Load += new System.EventHandler(this.vueAjoutCompte_Load);
