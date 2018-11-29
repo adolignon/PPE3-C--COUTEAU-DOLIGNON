@@ -167,7 +167,6 @@
             this.fermetureDunCompteToolStripMenuItem.Name = "fermetureDunCompteToolStripMenuItem";
             this.fermetureDunCompteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.fermetureDunCompteToolStripMenuItem.Text = "Fermeture d\'un compte";
-            this.fermetureDunCompteToolStripMenuItem.Click += new System.EventHandler(this.fermetureDunCompteToolStripMenuItem_Click);
             // 
             // ajoutDunCompteToolStripMenuItem
             // 
