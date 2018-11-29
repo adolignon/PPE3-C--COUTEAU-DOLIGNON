@@ -102,6 +102,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\vueModifFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueModifFilm.Designer.cs">
+      <DependentUpon>vueModifFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\vueAddFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueAddFilm.Designer.cs">
+      <DependentUpon>vueAddFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\vueAddGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueAddGenre.Designer.cs">
+      <DependentUpon>vueAddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\vueAjouterSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueAjouterSerie.Designer.cs">
+      <DependentUpon>vueAjouterSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\vueModifGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueModifGenre.Designer.cs">
+      <DependentUpon>vueModifGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\vueParClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +187,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\vueModifFilm.resx">
+      <DependentUpon>vueModifFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueAddFilm.resx">
+      <DependentUpon>vueAddFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueAddGenre.resx">
+      <DependentUpon>vueAddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueAjouterSerie.resx">
+      <DependentUpon>vueAjouterSerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueModifGenre.resx">
+      <DependentUpon>vueModifGenre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\vueParClient.resx">
       <DependentUpon>vueParClient.cs</DependentUpon>
     </EmbeddedResource>

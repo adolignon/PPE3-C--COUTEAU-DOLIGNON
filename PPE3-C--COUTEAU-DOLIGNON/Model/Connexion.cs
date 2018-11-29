@@ -25,6 +25,21 @@ namespace PPE3_C__COUTEAU_DOLIGNON.Model
             return maConnexion.saison.ToList();
         }
 
+        internal static void ajouterGenre(string libelleGenre)
+        {
+            genre leGenre = new genre();
+            leGenre.idGenre = ListeDesGenre().Count();
+            leGenre.libelleGenre = libelleGenre;
+            maConnexion.genre.Add(leGenre);
+            maConnexion.SaveChanges();
+        }
+
+        internal static void modifierGenre(genre current, string libelle)
+        {
+            maConnexion.genre.Find(current.idGenre).libelleGenre = libelle;
+            maConnexion.SaveChanges();
+        }
+
         public static List<serie> ListeDesSeries()
         {
             return maConnexion.serie.ToList();
@@ -42,6 +57,12 @@ namespace PPE3_C__COUTEAU_DOLIGNON.Model
             
         }
 
+        internal static void ajouterSerie(serie laSerie)
+        {
+            maConnexion.serie.Add(laSerie);
+            maConnexion.SaveChanges();
+        }
+
         public static List<genre> ListeDesGenre()
         {
             return maConnexion.genre.ToList();
@@ -50,6 +71,29 @@ namespace PPE3_C__COUTEAU_DOLIGNON.Model
         public static List<emprunt> ListeDesEmprunts()
         {
             return maConnexion.emprunt.ToList();
+        }
+
+        internal static void modifierFilm(support current, string nom, string realisateur, int idGenre, string duree, string image)
+        {
+            maConnexion.support.Find(current.idSupport).titreSupport = nom;
+            maConnexion.support.Find(current.idSupport).realisateur = realisateur;
+            maConnexion.support.Find(current.idSupport).image = image;
+            maConnexion.support.Find(current.idSupport).idGenre = idGenre;
+            maConnexion.film.Find(current.idSupport).duree = duree;
+            maConnexion.SaveChanges();
+
+        }
+
+        internal static void ajouterSupport(support leSupport)
+        {
+            maConnexion.support.Add(leSupport);
+            maConnexion.SaveChanges();
+        }
+
+        internal static void ajouterFilm(film leFilm)
+        {
+            maConnexion.film.Add(leFilm);
+            maConnexion.SaveChanges();
         }
 
         public static List<episode> ListeDesEpisodes()

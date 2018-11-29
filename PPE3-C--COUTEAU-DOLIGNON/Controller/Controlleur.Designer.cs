@@ -192,7 +192,7 @@
             this.ajoutToolStripMenuItem,
             this.modificationToolStripMenuItem});
             this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.genreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.genreToolStripMenuItem.Text = "Genre";
             // 
             // ajoutToolStripMenuItem
@@ -200,12 +200,14 @@
             this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
             this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.ajoutToolStripMenuItem.Text = "Ajout";
+            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             // 
             // modificationToolStripMenuItem
             // 
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
             this.modificationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.modificationToolStripMenuItem.Text = "Modification";
+            this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
             // 
             // filmToolStripMenuItem
             // 
@@ -213,21 +215,22 @@
             this.ajoutToolStripMenuItem1,
             this.modificationToolStripMenuItem1});
             this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
-            this.filmToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.filmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.filmToolStripMenuItem.Text = "Film";
             // 
             // ajoutToolStripMenuItem1
             // 
             this.ajoutToolStripMenuItem1.Name = "ajoutToolStripMenuItem1";
-            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ajoutToolStripMenuItem1.Text = "Ajout";
             this.ajoutToolStripMenuItem1.Click += new System.EventHandler(this.ajoutToolStripMenuItem1_Click);
             // 
             // modificationToolStripMenuItem1
             // 
             this.modificationToolStripMenuItem1.Name = "modificationToolStripMenuItem1";
-            this.modificationToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.modificationToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.modificationToolStripMenuItem1.Text = "Modification";
+            this.modificationToolStripMenuItem1.Click += new System.EventHandler(this.modificationToolStripMenuItem1_Click);
             // 
             // sérieToolStripMenuItem
             // 
@@ -235,19 +238,20 @@
             this.ajoutToolStripMenuItem2,
             this.modificationToolStripMenuItem2});
             this.sérieToolStripMenuItem.Name = "sérieToolStripMenuItem";
-            this.sérieToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.sérieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sérieToolStripMenuItem.Text = "Série";
             // 
             // ajoutToolStripMenuItem2
             // 
             this.ajoutToolStripMenuItem2.Name = "ajoutToolStripMenuItem2";
-            this.ajoutToolStripMenuItem2.Size = new System.Drawing.Size(142, 22);
+            this.ajoutToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.ajoutToolStripMenuItem2.Text = "Ajout";
+            this.ajoutToolStripMenuItem2.Click += new System.EventHandler(this.ajoutToolStripMenuItem2_Click);
             // 
             // modificationToolStripMenuItem2
             // 
             this.modificationToolStripMenuItem2.Name = "modificationToolStripMenuItem2";
-            this.modificationToolStripMenuItem2.Size = new System.Drawing.Size(142, 22);
+            this.modificationToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.modificationToolStripMenuItem2.Text = "Modification";
             // 
             // saisonToolStripMenuItem
@@ -256,7 +260,7 @@
             this.ajoutToolStripMenuItem3,
             this.modificationToolStripMenuItem3});
             this.saisonToolStripMenuItem.Name = "saisonToolStripMenuItem";
-            this.saisonToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.saisonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saisonToolStripMenuItem.Text = "Saison";
             // 
             // ajoutToolStripMenuItem3
@@ -277,7 +281,7 @@
             this.ajoutToolStripMenuItem4,
             this.modificationToolStripMenuItem4});
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientToolStripMenuItem.Text = "Client";
             // 
             // ajoutToolStripMenuItem4

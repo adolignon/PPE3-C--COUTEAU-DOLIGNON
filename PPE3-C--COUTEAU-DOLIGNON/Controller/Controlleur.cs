@@ -20,7 +20,8 @@ namespace PPE3_C__COUTEAU_DOLIGNON
 
         private void ajoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            vueAddFilm laVue = new vueAddFilm();
+            laVue.Show();
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,7 +71,28 @@ namespace PPE3_C__COUTEAU_DOLIGNON
             verifCompte.Show();
         }
 
+        private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueAddGenre laVue = new vueAddGenre();
+            laVue.Show();
+        }
 
+        private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueModifGenre laVue = new vueModifGenre();
+            laVue.Show();
+        }
 
+        private void ajoutToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            vueAjouterSerie laVue = new vueAjouterSerie();
+            laVue.Show();
+        }
+
+        private void modificationToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            vueModifFilm laVue = new vueModifFilm();
+            laVue.Show();
+        }
     }
 }
