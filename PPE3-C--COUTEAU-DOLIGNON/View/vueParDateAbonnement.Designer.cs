@@ -99,7 +99,7 @@
             this.Controls.Add(this.dgSupport);
             this.Controls.Add(this.cbDate);
             this.Name = "vueParDateAbonnement";
-            this.Text = "vueParDateAbonnement";
+            this.Text = "Supports par Date d\'abonnement";
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).EndInit();

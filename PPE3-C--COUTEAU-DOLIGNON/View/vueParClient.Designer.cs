@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.cbClient = new System.Windows.Forms.ComboBox();
             this.dgSupport = new System.Windows.Forms.DataGridView();
-            this.bsSupport = new System.Windows.Forms.BindingSource(this.components);
             this.idSupportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titreSupportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.realisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsSupport = new System.Windows.Forms.BindingSource(this.components);
             this.bsClient = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).BeginInit();
@@ -63,10 +63,6 @@
             this.dgSupport.Size = new System.Drawing.Size(408, 282);
             this.dgSupport.TabIndex = 1;
             // 
-            // bsSupport
-            // 
-            this.bsSupport.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.support);
-            // 
             // idSupportDataGridViewTextBoxColumn
             // 
             this.idSupportDataGridViewTextBoxColumn.DataPropertyName = "idSupport";
@@ -85,6 +81,10 @@
             this.realisateurDataGridViewTextBoxColumn.HeaderText = "realisateur";
             this.realisateurDataGridViewTextBoxColumn.Name = "realisateurDataGridViewTextBoxColumn";
             // 
+            // bsSupport
+            // 
+            this.bsSupport.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.support);
+            // 
             // bsClient
             // 
             this.bsClient.CurrentChanged += new System.EventHandler(this.bsClient_CurrentChanged);
@@ -99,7 +99,7 @@
             this.Controls.Add(this.dgSupport);
             this.Controls.Add(this.cbClient);
             this.Name = "vueParClient";
-            this.Text = "vueParClient";
+            this.Text = "Supports par Client";
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsClient)).EndInit();

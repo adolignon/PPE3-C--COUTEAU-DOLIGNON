@@ -25,5 +25,14 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
         {
 
         }
+
+        private void btnFermCompte_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Voulez-vous fermer le compte de " + cbFermClient.Text.Trim() + " ?", "Oui", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Connexion.fermetureCompte((client)cbFermClient.SelectedValue);
+                this.Close();
+            }
+        }
     }
 }

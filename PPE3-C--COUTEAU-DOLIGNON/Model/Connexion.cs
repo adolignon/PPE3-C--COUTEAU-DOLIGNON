@@ -61,6 +61,30 @@ namespace PPE3_C__COUTEAU_DOLIGNON.Model
         {
             return maConnexion.support.ToList();
         }
-        
+
+        public static void fermetureCompte(client leClient)
+        {
+            maConnexion.client.Find(leClient.idClient).actif = 2;
+            maConnexion.SaveChanges();
+        }
+
+        internal static void modifClient(client leClient, string nomCli, string prenomCli, string emailCli, string loginCli, string pwdCli, DateTime dateNaissCli)
+        {
+            maConnexion.client.Find(leClient.idClient).nomClient = nomCli;
+            maConnexion.client.Find(leClient.idClient).prenomClient = prenomCli;
+            maConnexion.client.Find(leClient.idClient).emailClient = emailCli;
+            maConnexion.client.Find(leClient.idClient).login = loginCli;
+            maConnexion.client.Find(leClient.idClient).pwd = pwdCli;
+            maConnexion.client.Find(leClient.idClient).dateNaissClient = dateNaissCli;
+            maConnexion.SaveChanges();
+
+        }
+
+        public static void ajoutCompte(client leClient)
+        {
+            maConnexion.client.Add(leClient);
+            maConnexion.SaveChanges();
+        }
+
     }
 }

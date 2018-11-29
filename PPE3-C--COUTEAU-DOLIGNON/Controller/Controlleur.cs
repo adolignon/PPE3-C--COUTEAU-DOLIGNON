@@ -75,5 +75,28 @@ namespace PPE3_C__COUTEAU_DOLIGNON
             vueFermetureCompte fermetureCompte = new vueFermetureCompte();
             fermetureCompte.Show();
         }
+
+        private void ajoutDunCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueAjoutCompte ajoutCompte = new vueAjoutCompte();
+            ajoutCompte.Show();
+        }
+
+        private void ajoutToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            vueAjoutCompte ajoutCompte = new vueAjoutCompte();
+            ajoutCompte.Show();
+        }
+
+        private void modificationToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            vueModifClient modifClient = new vueModifClient();
+            modifClient.Show();
+        }
+
+        private void Controlleur_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

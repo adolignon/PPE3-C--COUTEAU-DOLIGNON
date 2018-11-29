@@ -102,13 +102,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
+    <Compile Include="View\vueAjoutCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueAjoutCompte.Designer.cs">
+      <DependentUpon>vueAjoutCompte.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\vueFermetureCompte.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\vueFermetureCompte.Designer.cs">
       <DependentUpon>vueFermetureCompte.cs</DependentUpon>
-	</Compile>
+    </Compile>
+    <Compile Include="View\vueModifClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\vueModifClient.Designer.cs">
+      <DependentUpon>vueModifClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\vueParClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,9 +175,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\vueAjoutCompte.resx">
+      <DependentUpon>vueAjoutCompte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\vueFermetureCompte.resx">
       <DependentUpon>vueFermetureCompte.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\vueModifClient.resx">
+      <DependentUpon>vueModifClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\vueParClient.resx">
       <DependentUpon>vueParClient.cs</DependentUpon>
     </EmbeddedResource>

@@ -70,7 +70,7 @@
             this.Controls.Add(this.lbVerifClient);
             this.Controls.Add(this.cbActifInactif);
             this.Name = "vueVerificationCompte";
-            this.Text = "vueVerificationCompte";
+            this.Text = "Vérifier un compte";
             this.Load += new System.EventHandler(this.vueVerificationCompte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsVerifClient)).EndInit();
             this.ResumeLayout(false);

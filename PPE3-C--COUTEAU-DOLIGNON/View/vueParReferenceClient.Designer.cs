@@ -99,7 +99,7 @@
             this.Controls.Add(this.dgSupport);
             this.Controls.Add(this.cbRef);
             this.Name = "vueParReferenceClient";
-            this.Text = "vueParReferenceClient";
+            this.Text = "Supports par Emprunt";
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRef)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).EndInit();

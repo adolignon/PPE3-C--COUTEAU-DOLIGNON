@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.bsFermCompte = new System.Windows.Forms.BindingSource(this.components);
             this.cbFermClient = new System.Windows.Forms.ComboBox();
+            this.btnFermCompte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsFermCompte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,16 @@
             this.cbFermClient.Size = new System.Drawing.Size(256, 21);
             this.cbFermClient.TabIndex = 0;
             // 
+            // btnFermCompte
+            // 
+            this.btnFermCompte.Location = new System.Drawing.Point(296, 269);
+            this.btnFermCompte.Name = "btnFermCompte";
+            this.btnFermCompte.Size = new System.Drawing.Size(198, 23);
+            this.btnFermCompte.TabIndex = 1;
+            this.btnFermCompte.Text = "Fermer le compte";
+            this.btnFermCompte.UseVisualStyleBackColor = true;
+            this.btnFermCompte.Click += new System.EventHandler(this.btnFermCompte_Click);
+            // 
             // vueFermetureCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -53,9 +64,10 @@
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 613);
+            this.Controls.Add(this.btnFermCompte);
             this.Controls.Add(this.cbFermClient);
             this.Name = "vueFermetureCompte";
-            this.Text = "vueFermetureCompte";
+            this.Text = "Fermer un compte";
             this.Load += new System.EventHandler(this.vueFermetureCompte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsFermCompte)).EndInit();
             this.ResumeLayout(false);
@@ -66,5 +78,6 @@
 
         private System.Windows.Forms.BindingSource bsFermCompte;
         private System.Windows.Forms.ComboBox cbFermClient;
+        private System.Windows.Forms.Button btnFermCompte;
     }
 }

@@ -67,7 +67,7 @@
             this.Controls.Add(this.btnValidCompte);
             this.Controls.Add(this.cbClients);
             this.Name = "vueValidationCompte";
-            this.Text = "vueValidationCompte";
+            this.Text = "Valider un compte";
             this.Load += new System.EventHandler(this.vueValidationCompte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsClients)).EndInit();
             this.ResumeLayout(false);

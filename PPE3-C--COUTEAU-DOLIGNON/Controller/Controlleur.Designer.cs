@@ -174,6 +174,7 @@
             this.ajoutDunCompteToolStripMenuItem.Name = "ajoutDunCompteToolStripMenuItem";
             this.ajoutDunCompteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.ajoutDunCompteToolStripMenuItem.Text = "Ajout d\'un compte";
+            this.ajoutDunCompteToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunCompteToolStripMenuItem_Click);
             // 
             // composantsToolStripMenuItem
             // 
@@ -286,12 +287,14 @@
             this.ajoutToolStripMenuItem4.Name = "ajoutToolStripMenuItem4";
             this.ajoutToolStripMenuItem4.Size = new System.Drawing.Size(142, 22);
             this.ajoutToolStripMenuItem4.Text = "Ajout";
+            this.ajoutToolStripMenuItem4.Click += new System.EventHandler(this.ajoutToolStripMenuItem4_Click);
             // 
             // modificationToolStripMenuItem4
             // 
             this.modificationToolStripMenuItem4.Name = "modificationToolStripMenuItem4";
             this.modificationToolStripMenuItem4.Size = new System.Drawing.Size(142, 22);
             this.modificationToolStripMenuItem4.Text = "Modification";
+            this.modificationToolStripMenuItem4.Click += new System.EventHandler(this.modificationToolStripMenuItem4_Click);
             // 
             // Controlleur
             // 
@@ -305,6 +308,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Controlleur";
             this.Text = "Video&CO Admin";
+            this.Load += new System.EventHandler(this.Controlleur_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

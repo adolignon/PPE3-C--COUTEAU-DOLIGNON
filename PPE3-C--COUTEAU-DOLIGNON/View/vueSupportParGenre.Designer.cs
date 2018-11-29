@@ -99,7 +99,7 @@
             this.Controls.Add(this.dgSupport);
             this.Controls.Add(this.cbGenre);
             this.Name = "vueSupportParGenre";
-            this.Text = "vueSupportParGenre";
+            this.Text = "Supports par Genre";
             this.Load += new System.EventHandler(this.vueSupportParGenre_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSupport)).EndInit();
