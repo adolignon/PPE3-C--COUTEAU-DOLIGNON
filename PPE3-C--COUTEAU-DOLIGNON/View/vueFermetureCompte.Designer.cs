@@ -41,6 +41,7 @@
             // 
             // cbFermClient
             // 
+            this.cbFermClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFermClient.FormattingEnabled = true;
             this.cbFermClient.Location = new System.Drawing.Point(268, 71);
             this.cbFermClient.Name = "cbFermClient";

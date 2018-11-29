@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bsClients = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vueModifClient));
             this.cbModifCli = new System.Windows.Forms.ComboBox();
             this.btnModifCli = new System.Windows.Forms.Button();
             this.tbPwd = new System.Windows.Forms.TextBox();
@@ -45,13 +45,9 @@
             this.lblPrenomCli = new System.Windows.Forms.Label();
             this.lblNomCli = new System.Windows.Forms.Label();
             this.lblModifCompte = new System.Windows.Forms.Label();
+            this.bsClients = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsClients)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bsClients
-            // 
-            this.bsClients.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.client);
-            this.bsClients.CurrentChanged += new System.EventHandler(this.cbModifCli_SelectedIndexChanged);
             // 
             // cbModifCli
             // 
@@ -60,7 +56,6 @@
             this.cbModifCli.Name = "cbModifCli";
             this.cbModifCli.Size = new System.Drawing.Size(284, 21);
             this.cbModifCli.TabIndex = 2;
-            this.cbModifCli.SelectedIndexChanged += new System.EventHandler(this.cbModifCli_SelectedIndexChanged);
             // 
             // btnModifCli
             // 
@@ -75,6 +70,7 @@
             // tbPwd
             // 
             this.tbPwd.Location = new System.Drawing.Point(592, 197);
+            this.tbPwd.MaxLength = 30;
             this.tbPwd.Name = "tbPwd";
             this.tbPwd.Size = new System.Drawing.Size(189, 20);
             this.tbPwd.TabIndex = 28;
@@ -82,6 +78,7 @@
             // tbLogin
             // 
             this.tbLogin.Location = new System.Drawing.Point(592, 140);
+            this.tbLogin.MaxLength = 30;
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(189, 20);
             this.tbLogin.TabIndex = 27;
@@ -89,6 +86,7 @@
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(158, 305);
+            this.tbEmail.MaxLength = 32;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(189, 20);
             this.tbEmail.TabIndex = 26;
@@ -103,6 +101,7 @@
             // tbPrenomCli
             // 
             this.tbPrenomCli.Location = new System.Drawing.Point(158, 197);
+            this.tbPrenomCli.MaxLength = 60;
             this.tbPrenomCli.Name = "tbPrenomCli";
             this.tbPrenomCli.Size = new System.Drawing.Size(189, 20);
             this.tbPrenomCli.TabIndex = 24;
@@ -110,6 +109,7 @@
             // tbNomCli
             // 
             this.tbNomCli.Location = new System.Drawing.Point(158, 139);
+            this.tbNomCli.MaxLength = 60;
             this.tbNomCli.Name = "tbNomCli";
             this.tbNomCli.Size = new System.Drawing.Size(189, 20);
             this.tbNomCli.TabIndex = 23;
@@ -205,6 +205,11 @@
             this.lblModifCompte.Text = "Modification d\'un compte";
             this.lblModifCompte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // bsClients
+            // 
+            this.bsClients.DataSource = typeof(PPE3_C__COUTEAU_DOLIGNON.Model.client);
+            this.bsClients.CurrentChanged += new System.EventHandler(this.bsClients_CurrentChanged);
+            // 
             // vueModifClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +232,7 @@
             this.Controls.Add(this.lblModifCompte);
             this.Controls.Add(this.btnModifCli);
             this.Controls.Add(this.cbModifCli);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vueModifClient";
             this.Text = "Modifier un client";
             ((System.ComponentModel.ISupportInitialize)(this.bsClients)).EndInit();

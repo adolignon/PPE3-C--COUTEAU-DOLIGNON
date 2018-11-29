@@ -20,17 +20,13 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
             bsClients.DataSource = Connexion.ListeDesClients();
             cbModifCli.DataSource = bsClients;
             cbModifCli.DisplayMember = "login";
-        }
-
-        private void cbModifCli_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            tbNomCli.Text = ((client)bsClients.Current).nomClient;
-            tbPrenomCli.Text = ((client)bsClients.Current).prenomClient;
-            tbPrenomCli.Text = ((client)bsClients.Current).prenomClient;
+            tbNomCli.Text = ((client)bsClients.Current).nomClient.Trim();
+            tbPrenomCli.Text = ((client)bsClients.Current).prenomClient.Trim();
+            tbPrenomCli.Text = ((client)bsClients.Current).prenomClient.Trim();
             dtpDateNaiss.Value = ((DateTime)((client)bsClients.Current).dateNaissClient);
-            tbEmail.Text = ((client)bsClients.Current).emailClient;
-            tbLogin.Text = ((client)bsClients.Current).login;
-            tbPwd.Text = ((client)bsClients.Current).pwd;
+            tbEmail.Text = ((client)bsClients.Current).emailClient.Trim();
+            tbLogin.Text = ((client)bsClients.Current).login.Trim();
+            tbPwd.Text = ((client)bsClients.Current).pwd.Trim();
         }
 
         private void btnModifCli_Click(object sender, EventArgs e)
@@ -46,6 +42,17 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
                     MessageBox.Show("Modification effectuée avec succès !");
                     this.Close();
             }
+        }
+
+        private void bsClients_CurrentChanged(object sender, EventArgs e)
+        {
+            tbNomCli.Text = ((client)bsClients.Current).nomClient.Trim();
+            tbPrenomCli.Text = ((client)bsClients.Current).prenomClient.Trim();
+            tbPrenomCli.Text = ((client)bsClients.Current).prenomClient.Trim();
+            dtpDateNaiss.Value = ((DateTime)((client)bsClients.Current).dateNaissClient);
+            tbEmail.Text = ((client)bsClients.Current).emailClient.Trim();
+            tbLogin.Text = ((client)bsClients.Current).login.Trim();
+            tbPwd.Text = ((client)bsClients.Current).pwd.Trim();
         }
     }
 }
