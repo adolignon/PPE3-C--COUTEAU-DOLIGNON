@@ -167,6 +167,7 @@
             this.fermetureDunCompteToolStripMenuItem.Name = "fermetureDunCompteToolStripMenuItem";
             this.fermetureDunCompteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.fermetureDunCompteToolStripMenuItem.Text = "Fermeture d\'un compte";
+            this.fermetureDunCompteToolStripMenuItem.Click += new System.EventHandler(this.fermetureDunCompteToolStripMenuItem_Click);
             // 
             // ajoutDunCompteToolStripMenuItem
             // 
@@ -193,7 +194,7 @@
             this.ajoutToolStripMenuItem,
             this.modificationToolStripMenuItem});
             this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.genreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.genreToolStripMenuItem.Text = "Genre";
             // 
             // ajoutToolStripMenuItem
@@ -216,7 +217,7 @@
             this.ajoutToolStripMenuItem1,
             this.modificationToolStripMenuItem1});
             this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
-            this.filmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filmToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.filmToolStripMenuItem.Text = "Film";
             // 
             // ajoutToolStripMenuItem1
@@ -239,7 +240,7 @@
             this.ajoutToolStripMenuItem2,
             this.modificationToolStripMenuItem2});
             this.sérieToolStripMenuItem.Name = "sérieToolStripMenuItem";
-            this.sérieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sérieToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.sérieToolStripMenuItem.Text = "Série";
             // 
             // ajoutToolStripMenuItem2
@@ -262,20 +263,20 @@
             this.ajoutToolStripMenuItem3,
             this.modificationToolStripMenuItem3});
             this.saisonToolStripMenuItem.Name = "saisonToolStripMenuItem";
-            this.saisonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saisonToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.saisonToolStripMenuItem.Text = "Saison";
             // 
             // ajoutToolStripMenuItem3
             // 
             this.ajoutToolStripMenuItem3.Name = "ajoutToolStripMenuItem3";
-            this.ajoutToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.ajoutToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
             this.ajoutToolStripMenuItem3.Text = "Ajout";
             this.ajoutToolStripMenuItem3.Click += new System.EventHandler(this.ajoutToolStripMenuItem3_Click);
             // 
             // modificationToolStripMenuItem3
             // 
             this.modificationToolStripMenuItem3.Name = "modificationToolStripMenuItem3";
-            this.modificationToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.modificationToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
             this.modificationToolStripMenuItem3.Text = "Modification";
             this.modificationToolStripMenuItem3.Click += new System.EventHandler(this.modificationToolStripMenuItem3_Click);
             // 
@@ -285,7 +286,7 @@
             this.ajoutToolStripMenuItem4,
             this.modificationToolStripMenuItem4});
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.clientToolStripMenuItem.Text = "Client";
             // 
             // ajoutToolStripMenuItem4
@@ -314,7 +315,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Controlleur";
             this.Text = "Video&CO Admin";
-            this.Load += new System.EventHandler(this.Controlleur_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

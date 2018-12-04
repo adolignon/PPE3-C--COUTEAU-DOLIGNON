@@ -131,9 +131,11 @@ namespace PPE3_C__COUTEAU_DOLIGNON
             modifClient.Show();
         }
 
-        private void Controlleur_Load(object sender, EventArgs e)
-        {
 
+        private void fermetureDunCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vueFermetureCompte laVue = new vueFermetureCompte();
+            laVue.Show();
         }
     }
 }
