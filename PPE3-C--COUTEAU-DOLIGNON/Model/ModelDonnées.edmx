@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PPE3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PPE3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="client">
           <Key>
             <PropertyRef Name="idClient" />
@@ -205,25 +205,62 @@
             <End Role="support" EntitySet="support" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PPE3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ppe3Connexion" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="client" EntityType="PPE3Model.client" />
+          <EntitySet Name="emprunt" EntityType="PPE3Model.emprunt" />
+          <EntitySet Name="episode" EntityType="PPE3Model.episode" />
+          <EntitySet Name="film" EntityType="PPE3Model.film" />
+          <EntitySet Name="genre" EntityType="PPE3Model.genre" />
+          <EntitySet Name="saison" EntityType="PPE3Model.saison" />
+          <EntitySet Name="serie" EntityType="PPE3Model.serie" />
+          <EntitySet Name="support" EntityType="PPE3Model.support" />
+          <AssociationSet Name="fk_emprunt_client" Association="PPE3Model.fk_emprunt_client">
+            <End Role="client" EntitySet="client" />
+            <End Role="emprunt" EntitySet="emprunt" />
+          </AssociationSet>
+          <AssociationSet Name="fk_emprunt_support" Association="PPE3Model.fk_emprunt_support">
+            <End Role="support" EntitySet="support" />
+            <End Role="emprunt" EntitySet="emprunt" />
+          </AssociationSet>
+          <AssociationSet Name="fk_episode_saison" Association="PPE3Model.fk_episode_saison">
+            <End Role="saison" EntitySet="saison" />
+            <End Role="episode" EntitySet="episode" />
+          </AssociationSet>
+          <AssociationSet Name="fk_film_support" Association="PPE3Model.fk_film_support">
+            <End Role="support" EntitySet="support" />
+            <End Role="film" EntitySet="film" />
+          </AssociationSet>
+          <AssociationSet Name="fk_support_genre" Association="PPE3Model.fk_support_genre">
+            <End Role="genre" EntitySet="genre" />
+            <End Role="support" EntitySet="support" />
+          </AssociationSet>
+          <AssociationSet Name="fk_saison_serie" Association="PPE3Model.fk_saison_serie">
+            <End Role="serie" EntitySet="serie" />
+            <End Role="saison" EntitySet="saison" />
+          </AssociationSet>
+          <AssociationSet Name="fk_serie_support" Association="PPE3Model.fk_serie_support">
+            <End Role="support" EntitySet="support" />
+            <End Role="serie" EntitySet="serie" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="client">
           <Key>
             <PropertyRef Name="idClient" />
           </Key>
           <Property Name="idClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nomClient" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="prenomClient" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="emailClient" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="nomClient" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="prenomClient" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="emailClient" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
           <Property Name="dateAbonnementClient" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="login" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="pwd" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="login" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="pwd" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
           <Property Name="actif" Type="Int32" Nullable="false" />
           <Property Name="dateNaissClient" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="emprunt" Relationship="Self.fk_emprunt_client" FromRole="client" ToRole="emprunt" />
+          <NavigationProperty Name="emprunt" Relationship="PPE3Model.fk_emprunt_client" FromRole="client" ToRole="emprunt" />
         </EntityType>
         <EntityType Name="emprunt">
           <Key>
@@ -233,8 +270,8 @@
           <Property Name="dateEmprunt" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="idClient" Type="Int32" Nullable="false" />
           <Property Name="idSupport" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="client" Relationship="Self.fk_emprunt_client" FromRole="emprunt" ToRole="client" />
-          <NavigationProperty Name="support" Relationship="Self.fk_emprunt_support" FromRole="emprunt" ToRole="support" />
+          <NavigationProperty Name="client" Relationship="PPE3Model.fk_emprunt_client" FromRole="emprunt" ToRole="client" />
+          <NavigationProperty Name="support" Relationship="PPE3Model.fk_emprunt_support" FromRole="emprunt" ToRole="support" />
         </EntityType>
         <EntityType Name="episode">
           <Key>
@@ -245,25 +282,25 @@
           <Property Name="idSerie" Type="Int32" Nullable="false" />
           <Property Name="numSaison" Type="Int32" Nullable="false" />
           <Property Name="numEpisode" Type="Int32" Nullable="false" />
-          <Property Name="titreEpisode" Type="String" MaxLength="150" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="titreEpisode" Type="String" Nullable="false" MaxLength="150" FixedLength="true" Unicode="false" />
           <Property Name="duree" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="saison" Relationship="Self.fk_episode_saison" FromRole="episode" ToRole="saison" />
+          <NavigationProperty Name="saison" Relationship="PPE3Model.fk_episode_saison" FromRole="episode" ToRole="saison" />
         </EntityType>
         <EntityType Name="film">
           <Key>
             <PropertyRef Name="idFilm" />
           </Key>
           <Property Name="idFilm" Type="Int32" Nullable="false" />
-          <Property Name="duree" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="support" Relationship="Self.fk_film_support" FromRole="film" ToRole="support" />
+          <Property Name="duree" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="support" Relationship="PPE3Model.fk_film_support" FromRole="film" ToRole="support" />
         </EntityType>
         <EntityType Name="genre">
           <Key>
             <PropertyRef Name="idGenre" />
           </Key>
           <Property Name="idGenre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="libelleGenre" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="support" Relationship="Self.fk_support_genre" FromRole="genre" ToRole="support" />
+          <Property Name="libelleGenre" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="support" Relationship="PPE3Model.fk_support_genre" FromRole="genre" ToRole="support" />
         </EntityType>
         <EntityType Name="saison">
           <Key>
@@ -274,35 +311,35 @@
           <Property Name="numSaison" Type="Int32" Nullable="false" />
           <Property Name="anneeSaison" Type="Int32" Nullable="false" />
           <Property Name="nbrEpisodesPrevus" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="episode" Relationship="Self.fk_episode_saison" FromRole="saison" ToRole="episode" />
-          <NavigationProperty Name="serie" Relationship="Self.fk_saison_serie" FromRole="saison" ToRole="serie" />
+          <NavigationProperty Name="episode" Relationship="PPE3Model.fk_episode_saison" FromRole="saison" ToRole="episode" />
+          <NavigationProperty Name="serie" Relationship="PPE3Model.fk_saison_serie" FromRole="saison" ToRole="serie" />
         </EntityType>
         <EntityType Name="serie">
           <Key>
             <PropertyRef Name="idSerie" />
           </Key>
           <Property Name="idSerie" Type="Int32" Nullable="false" />
-          <Property Name="resumeSerie" Type="String" MaxLength="150" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="saison" Relationship="Self.fk_saison_serie" FromRole="serie" ToRole="saison" />
-          <NavigationProperty Name="support" Relationship="Self.fk_serie_support" FromRole="serie" ToRole="support" />
+          <Property Name="resumeSerie" Type="String" Nullable="false" MaxLength="150" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="saison" Relationship="PPE3Model.fk_saison_serie" FromRole="serie" ToRole="saison" />
+          <NavigationProperty Name="support" Relationship="PPE3Model.fk_serie_support" FromRole="serie" ToRole="support" />
         </EntityType>
         <EntityType Name="support">
           <Key>
             <PropertyRef Name="idSupport" />
           </Key>
           <Property Name="idSupport" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="titreSupport" Type="String" MaxLength="150" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="realisateur" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="image" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="titreSupport" Type="String" Nullable="false" MaxLength="150" FixedLength="true" Unicode="false" />
+          <Property Name="realisateur" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="image" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
           <Property Name="idGenre" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="emprunt" Relationship="Self.fk_emprunt_support" FromRole="support" ToRole="emprunt" />
-          <NavigationProperty Name="film" Relationship="Self.fk_film_support" FromRole="support" ToRole="film" />
-          <NavigationProperty Name="genre" Relationship="Self.fk_support_genre" FromRole="support" ToRole="genre" />
-          <NavigationProperty Name="serie" Relationship="Self.fk_serie_support" FromRole="support" ToRole="serie" />
+          <NavigationProperty Name="emprunt" Relationship="PPE3Model.fk_emprunt_support" FromRole="support" ToRole="emprunt" />
+          <NavigationProperty Name="film" Relationship="PPE3Model.fk_film_support" FromRole="support" ToRole="film" />
+          <NavigationProperty Name="genre" Relationship="PPE3Model.fk_support_genre" FromRole="support" ToRole="genre" />
+          <NavigationProperty Name="serie" Relationship="PPE3Model.fk_serie_support" FromRole="support" ToRole="serie" />
         </EntityType>
         <Association Name="fk_emprunt_client">
-          <End Role="client" Type="Self.client" Multiplicity="1" />
-          <End Role="emprunt" Type="Self.emprunt" Multiplicity="*" />
+          <End Type="PPE3Model.client" Role="client" Multiplicity="1" />
+          <End Type="PPE3Model.emprunt" Role="emprunt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="client">
               <PropertyRef Name="idClient" />
@@ -313,8 +350,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_emprunt_support">
-          <End Role="support" Type="Self.support" Multiplicity="1" />
-          <End Role="emprunt" Type="Self.emprunt" Multiplicity="*" />
+          <End Type="PPE3Model.support" Role="support" Multiplicity="1" />
+          <End Type="PPE3Model.emprunt" Role="emprunt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="support">
               <PropertyRef Name="idSupport" />
@@ -325,8 +362,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_episode_saison">
-          <End Role="saison" Type="Self.saison" Multiplicity="1" />
-          <End Role="episode" Type="Self.episode" Multiplicity="*" />
+          <End Type="PPE3Model.saison" Role="saison" Multiplicity="1" />
+          <End Type="PPE3Model.episode" Role="episode" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="saison">
               <PropertyRef Name="idSerie" />
@@ -339,8 +376,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_film_support">
-          <End Role="support" Type="Self.support" Multiplicity="1" />
-          <End Role="film" Type="Self.film" Multiplicity="0..1" />
+          <End Type="PPE3Model.support" Role="support" Multiplicity="1" />
+          <End Type="PPE3Model.film" Role="film" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="support">
               <PropertyRef Name="idSupport" />
@@ -351,8 +388,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_support_genre">
-          <End Role="genre" Type="Self.genre" Multiplicity="1" />
-          <End Role="support" Type="Self.support" Multiplicity="*" />
+          <End Type="PPE3Model.genre" Role="genre" Multiplicity="1" />
+          <End Type="PPE3Model.support" Role="support" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="genre">
               <PropertyRef Name="idGenre" />
@@ -363,8 +400,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_saison_serie">
-          <End Role="serie" Type="Self.serie" Multiplicity="1" />
-          <End Role="saison" Type="Self.saison" Multiplicity="*" />
+          <End Type="PPE3Model.serie" Role="serie" Multiplicity="1" />
+          <End Type="PPE3Model.saison" Role="saison" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="serie">
               <PropertyRef Name="idSerie" />
@@ -375,8 +412,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_serie_support">
-          <End Role="support" Type="Self.support" Multiplicity="1" />
-          <End Role="serie" Type="Self.serie" Multiplicity="0..1" />
+          <End Type="PPE3Model.support" Role="support" Multiplicity="1" />
+          <End Type="PPE3Model.serie" Role="serie" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="support">
               <PropertyRef Name="idSupport" />
@@ -386,44 +423,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ppe3Connexion" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="client" EntityType="Self.client" />
-          <EntitySet Name="emprunt" EntityType="Self.emprunt" />
-          <EntitySet Name="episode" EntityType="Self.episode" />
-          <EntitySet Name="film" EntityType="Self.film" />
-          <EntitySet Name="genre" EntityType="Self.genre" />
-          <EntitySet Name="saison" EntityType="Self.saison" />
-          <EntitySet Name="serie" EntityType="Self.serie" />
-          <EntitySet Name="support" EntityType="Self.support" />
-          <AssociationSet Name="fk_emprunt_client" Association="Self.fk_emprunt_client">
-            <End Role="client" EntitySet="client" />
-            <End Role="emprunt" EntitySet="emprunt" />
-          </AssociationSet>
-          <AssociationSet Name="fk_emprunt_support" Association="Self.fk_emprunt_support">
-            <End Role="support" EntitySet="support" />
-            <End Role="emprunt" EntitySet="emprunt" />
-          </AssociationSet>
-          <AssociationSet Name="fk_episode_saison" Association="Self.fk_episode_saison">
-            <End Role="saison" EntitySet="saison" />
-            <End Role="episode" EntitySet="episode" />
-          </AssociationSet>
-          <AssociationSet Name="fk_film_support" Association="Self.fk_film_support">
-            <End Role="support" EntitySet="support" />
-            <End Role="film" EntitySet="film" />
-          </AssociationSet>
-          <AssociationSet Name="fk_support_genre" Association="Self.fk_support_genre">
-            <End Role="genre" EntitySet="genre" />
-            <End Role="support" EntitySet="support" />
-          </AssociationSet>
-          <AssociationSet Name="fk_saison_serie" Association="Self.fk_saison_serie">
-            <End Role="serie" EntitySet="serie" />
-            <End Role="saison" EntitySet="saison" />
-          </AssociationSet>
-          <AssociationSet Name="fk_serie_support" Association="Self.fk_serie_support">
-            <End Role="support" EntitySet="support" />
-            <End Role="serie" EntitySet="serie" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -433,81 +432,81 @@
           <EntitySetMapping Name="client">
             <EntityTypeMapping TypeName="PPE3Model.client">
               <MappingFragment StoreEntitySet="client">
-                <ScalarProperty Name="idClient" ColumnName="idClient" />
-                <ScalarProperty Name="nomClient" ColumnName="nomClient" />
-                <ScalarProperty Name="prenomClient" ColumnName="prenomClient" />
-                <ScalarProperty Name="emailClient" ColumnName="emailClient" />
-                <ScalarProperty Name="dateAbonnementClient" ColumnName="dateAbonnementClient" />
-                <ScalarProperty Name="login" ColumnName="login" />
-                <ScalarProperty Name="pwd" ColumnName="pwd" />
-                <ScalarProperty Name="actif" ColumnName="actif" />
                 <ScalarProperty Name="dateNaissClient" ColumnName="dateNaissClient" />
+                <ScalarProperty Name="actif" ColumnName="actif" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="dateAbonnementClient" ColumnName="dateAbonnementClient" />
+                <ScalarProperty Name="emailClient" ColumnName="emailClient" />
+                <ScalarProperty Name="prenomClient" ColumnName="prenomClient" />
+                <ScalarProperty Name="nomClient" ColumnName="nomClient" />
+                <ScalarProperty Name="idClient" ColumnName="idClient" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="emprunt">
             <EntityTypeMapping TypeName="PPE3Model.emprunt">
               <MappingFragment StoreEntitySet="emprunt">
-                <ScalarProperty Name="idEmprunt" ColumnName="idEmprunt" />
-                <ScalarProperty Name="dateEmprunt" ColumnName="dateEmprunt" />
-                <ScalarProperty Name="idClient" ColumnName="idClient" />
                 <ScalarProperty Name="idSupport" ColumnName="idSupport" />
+                <ScalarProperty Name="idClient" ColumnName="idClient" />
+                <ScalarProperty Name="dateEmprunt" ColumnName="dateEmprunt" />
+                <ScalarProperty Name="idEmprunt" ColumnName="idEmprunt" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="episode">
             <EntityTypeMapping TypeName="PPE3Model.episode">
               <MappingFragment StoreEntitySet="episode">
-                <ScalarProperty Name="idSerie" ColumnName="idSerie" />
-                <ScalarProperty Name="numSaison" ColumnName="numSaison" />
-                <ScalarProperty Name="numEpisode" ColumnName="numEpisode" />
-                <ScalarProperty Name="titreEpisode" ColumnName="titreEpisode" />
                 <ScalarProperty Name="duree" ColumnName="duree" />
+                <ScalarProperty Name="titreEpisode" ColumnName="titreEpisode" />
+                <ScalarProperty Name="numEpisode" ColumnName="numEpisode" />
+                <ScalarProperty Name="numSaison" ColumnName="numSaison" />
+                <ScalarProperty Name="idSerie" ColumnName="idSerie" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="film">
             <EntityTypeMapping TypeName="PPE3Model.film">
               <MappingFragment StoreEntitySet="film">
-                <ScalarProperty Name="idFilm" ColumnName="idFilm" />
                 <ScalarProperty Name="duree" ColumnName="duree" />
+                <ScalarProperty Name="idFilm" ColumnName="idFilm" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="genre">
             <EntityTypeMapping TypeName="PPE3Model.genre">
               <MappingFragment StoreEntitySet="genre">
-                <ScalarProperty Name="idGenre" ColumnName="idGenre" />
                 <ScalarProperty Name="libelleGenre" ColumnName="libelleGenre" />
+                <ScalarProperty Name="idGenre" ColumnName="idGenre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="saison">
             <EntityTypeMapping TypeName="PPE3Model.saison">
               <MappingFragment StoreEntitySet="saison">
-                <ScalarProperty Name="idSerie" ColumnName="idSerie" />
-                <ScalarProperty Name="numSaison" ColumnName="numSaison" />
-                <ScalarProperty Name="anneeSaison" ColumnName="anneeSaison" />
                 <ScalarProperty Name="nbrEpisodesPrevus" ColumnName="nbrEpisodesPrevus" />
+                <ScalarProperty Name="anneeSaison" ColumnName="anneeSaison" />
+                <ScalarProperty Name="numSaison" ColumnName="numSaison" />
+                <ScalarProperty Name="idSerie" ColumnName="idSerie" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="serie">
             <EntityTypeMapping TypeName="PPE3Model.serie">
               <MappingFragment StoreEntitySet="serie">
-                <ScalarProperty Name="idSerie" ColumnName="idSerie" />
                 <ScalarProperty Name="resumeSerie" ColumnName="resumeSerie" />
+                <ScalarProperty Name="idSerie" ColumnName="idSerie" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="support">
             <EntityTypeMapping TypeName="PPE3Model.support">
               <MappingFragment StoreEntitySet="support">
-                <ScalarProperty Name="idSupport" ColumnName="idSupport" />
-                <ScalarProperty Name="titreSupport" ColumnName="titreSupport" />
-                <ScalarProperty Name="realisateur" ColumnName="realisateur" />
-                <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="idGenre" ColumnName="idGenre" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="realisateur" ColumnName="realisateur" />
+                <ScalarProperty Name="titreSupport" ColumnName="titreSupport" />
+                <ScalarProperty Name="idSupport" ColumnName="idSupport" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

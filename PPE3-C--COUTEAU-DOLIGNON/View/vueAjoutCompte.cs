@@ -47,9 +47,16 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
                     leClient.pwd = tbPwd.Text;
                     leClient.actif = 0;
                     leClient.dateNaissClient = dtpDateNaiss.Value;
-                    Connexion.ajoutCompte(leClient);
-                    MessageBox.Show("Ajout effectué avec succès !");
-                    this.Close();
+                    string message = Connexion.ajoutCompte(leClient);
+                    if (message is null)
+                    {
+                        MessageBox.Show("Ajout effectué avec succès !");
+                        this.Close();
+                    }
+                    else {
+                        MessageBox.Show(message);
+                    }
+                    
                 }
             }
             

@@ -152,10 +152,21 @@ namespace PPE3_C__COUTEAU_DOLIGNON.Model
 
         }
 
-        public static void ajoutCompte(client leClient)
+        public static string ajoutCompte(client leClient)
         {
             maConnexion.client.Add(leClient);
-            maConnexion.SaveChanges();
+            try
+            {
+                maConnexion.SaveChanges();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                maConnexion.Dispose();
+                init();
+                return ex.InnerException.InnerException.Message;
+            }
+            
         }
 
     }
