@@ -26,10 +26,21 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
             }
             else
             {
-                if (Connexion.ListeDesClients().Where(c => c.actif == 0).Count() != 0)
-                    bsVerifClient.DataSource = Connexion.ListeDesClients().Where(c => c.actif == 0);
+                if (cbActifInactif.SelectedItem.ToString() == "Inactif")
+                {
+
+                    if (Connexion.ListeDesClients().Where(c => c.actif == 0).Count() != 0)
+                        bsVerifClient.DataSource = Connexion.ListeDesClients().Where(c => c.actif == 0);
+                    else
+                        bsVerifClient.DataSource = new List<string>() { "Il n'existe pas de clients INACTIFS" };
+                }
                 else
-                    bsVerifClient.DataSource = new List<string>() { "Il n'existe pas de clients INACTIFS" };
+                {
+                    if (Connexion.ListeDesClients().Where(c => c.actif == 2).Count() != 0)
+                        bsVerifClient.DataSource = Connexion.ListeDesClients().Where(c => c.actif == 2);
+                    else
+                        bsVerifClient.DataSource = new List<string>() { "Il n'existe pas de clients possédant un compte FERME" };
+                }
             }
             lbVerifClient.DataSource = bsVerifClient;
             lbVerifClient.DisplayMember = "login";
@@ -50,25 +61,24 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
 
         private void cbActifInactif_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbActifInactif.SelectedItem.ToString() == "Actif")
+            if (cbActifInactif.SelectedItem.ToString() == "Inactif")
             {
-                if (Connexion.ListeDesClients().Where(c => c.actif == 1).Count() != 0)
-                    bsVerifClient.DataSource = Connexion.ListeDesClients().Where(c => c.actif == 1);
-                else
-                    bsVerifClient.DataSource = new List<string>() { "Il n'existe pas de clients ACTIFS" };
-            }
-            else
-            {
+
                 if (Connexion.ListeDesClients().Where(c => c.actif == 0).Count() != 0)
                     bsVerifClient.DataSource = Connexion.ListeDesClients().Where(c => c.actif == 0);
                 else
                     bsVerifClient.DataSource = new List<string>() { "Il n'existe pas de clients INACTIFS" };
             }
-            lbVerifClient.DataSource = bsVerifClient;
-            lbVerifClient.DisplayMember = "login";
+            else
+            {
+                if (Connexion.ListeDesClients().Where(c => c.actif == 2).Count() != 0)
+                    bsVerifClient.DataSource = Connexion.ListeDesClients().Where(c => c.actif == 2);
+                else
+                    bsVerifClient.DataSource = new List<string>() { "Il n'existe pas de clients possédant un compte FERME" };
+            }
         }
 
-        private void lbVerifClient_DoubleClick(object sender, EventArgs e)
+            private void lbVerifClient_DoubleClick(object sender, EventArgs e)
         {
             if(cbActifInactif.SelectedItem.ToString() == "Inactif")
             {

@@ -16,7 +16,7 @@ namespace PPE3_C__COUTEAU_DOLIGNON.View
         public vueFermetureCompte()
         {
             InitializeComponent();
-            bsFermCompte.DataSource = Connexion.ListeDesClients();
+            bsFermCompte.DataSource = Connexion.ListeDesClients().Where(c => c.actif != 2);
             cbFermClient.DataSource = bsFermCompte;
             cbFermClient.DisplayMember = "login";
         }

@@ -36,35 +36,36 @@
             this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsVerifClient)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // cbActifInactif
-            //
+            // 
             this.cbActifInactif.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbActifInactif.FormattingEnabled = true;
             this.cbActifInactif.Items.AddRange(new object[] {
             "Actif",
-            "Inactif"});
+            "Inactif",
+            "Fermé"});
             this.cbActifInactif.Location = new System.Drawing.Point(278, 75);
             this.cbActifInactif.Name = "cbActifInactif";
             this.cbActifInactif.Size = new System.Drawing.Size(277, 21);
             this.cbActifInactif.TabIndex = 0;
             this.cbActifInactif.SelectedIndexChanged += new System.EventHandler(this.cbActifInactif_SelectedIndexChanged);
-            //
+            // 
             // lbVerifClient
-            //
+            // 
             this.lbVerifClient.FormattingEnabled = true;
             this.lbVerifClient.Location = new System.Drawing.Point(278, 181);
             this.lbVerifClient.Name = "lbVerifClient";
             this.lbVerifClient.Size = new System.Drawing.Size(277, 316);
             this.lbVerifClient.TabIndex = 2;
             this.lbVerifClient.DoubleClick += new System.EventHandler(this.lbVerifClient_DoubleClick);
-            //
+            // 
             // bsVerifClient
-            //
+            // 
             this.bsVerifClient.CurrentChanged += new System.EventHandler(this.bsVerifClient_CurrentChanged);
-            //
+            // 
             // btnRetour
-            //
+            // 
             this.btnRetour.Location = new System.Drawing.Point(633, 267);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(91, 35);
@@ -72,9 +73,9 @@
             this.btnRetour.Text = "Retour";
             this.btnRetour.UseVisualStyleBackColor = true;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
-            //
+            // 
             // vueVerificationCompte
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PPE3_C__COUTEAU_DOLIGNON.Properties.Resources.fond;
